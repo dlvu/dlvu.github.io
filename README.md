@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+---
+layout: default
+title: Deep Learning @ VU
+---
 
-You can use the [editor on GitHub](https://github.com/dlvu/dlvu.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+This page contains all public information about the course _Deep Learning_ at the Vrije Universiteit Amsterdam. This is a work in progress, expect to see more material appear here as the course progresses.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+If you are a registered student, please refer to the Canvas page instead. 
+ 
+<table>
+  <tr>
+   <th></th>
+    <th></th>
+    <th>lecture</th>
+    <th>homework</th>
+  </tr>
+  <tr>
+    <td>week 1</td>    <td>Introduction</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td>    <td>Backpropagation</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td>week 2    <td>CNNs</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td>    <td>Common techniques</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td>week 3<td>Sequential data</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td> <td>Autoencoders</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td>week 4</td> <td><GANs/td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td> <td>Graph models</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td>week 5</td> <td>Reinforcement learning</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td> <td>Autoregressive models and Flows</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td>Week 6</td> <td>Deep reinforcement learning</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td> <td>Transformers & self attention</td> <td></td> <td></td>
+  </tr>  
 
-### Markdown
+  <tr>
+    <td>Week 7</td> <td>Guest lecture</td> <td></td> <td></td>
+  </tr>
+  <tr>
+    <td></td> <td>Guest lecture</td> <td></td> <td></td>
+  </tr>  
+</table>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dlvu/dlvu.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
