@@ -33,7 +33,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td></td> <td>Autoencoders</td> <td></td> <td></td>
   </tr>
   <tr>
-    <td>week 4</td> <td><GANs/td> <td></td> <td></td>
+    <td>week 4</td> <td>GANs</td> <td></td> <td></td>
   </tr>
   <tr>
     <td></td> <td>Graph models</td> <td></td> <td></td>
