@@ -21,7 +21,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td></td>    <td>Backpropagation</td> <td></td> <td></td>
   </tr>
   <tr>
-    <td></td>week 2    <td>CNNs</td> <td></td> <td></td>
+    <td>week 2 </td> <td>CNNs</td> <td></td> <td></td>
   </tr>
   <tr>
     <td></td>    <td>Common techniques</td> <td></td> <td></td>
