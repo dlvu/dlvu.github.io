@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+
+title:            DLVU
+description:      Deep Learning at VU University Amsterdam
+
+google_analytics: UA-33416628-6
