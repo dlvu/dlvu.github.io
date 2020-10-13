@@ -27,7 +27,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td></td>    <td>Common techniques</td> <td></td> <td></td>
   </tr>
   <tr>
-    <td></td>week 3<td>Sequential data</td> <td></td> <td></td>
+    <td>week 3</td><td>Sequential data</td> <td></td> <td></td>
   </tr>
   <tr>
     <td></td> <td>Autoencoders</td> <td></td> <td></td>
