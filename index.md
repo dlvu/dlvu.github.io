@@ -47,65 +47,57 @@ If you are a registered student, please refer to the Canvas page instead.
   <tr>
     <td>week 3</td><td>Sequential data</td>
     <td>
-    
+    <a class=" inline_disabled" href="https://youtu.be/rK20XfDN1N4">A</a>, <a class=" inline_disabled" href="https://youtu.be/2JGlmBhQedk">B</a>, <a class=" inline_disabled" href="https://youtu.be/fbTCvvICk8M">C</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=rT77lBfAZm4&amp;ab_channel=DLVU">D</a>, <a class=" inline_disabled" href="https://youtu.be/csAlW9HmwAQ">E</a>*
     </td> 
     <td>    <a href="/slides/dlvu.lecture05.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td> <td>Autoencoders</td> 
+    <td></td> <td>Latent Variable Models (pPCA and VAE)</td> 
     <td>
-    
+    <a class=" inline_disabled" href="https://youtu.be/EfOZQvSCDsE">A</a>, <a class=" inline_disabled" href="https://youtu.be/BTUehwU_5Uo">B</a>, <a class=" inline_disabled" href="https://youtu.be/ywNkaCdr6nA">C</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture06.pdf">pdf</a></td>
   </tr>
   <tr>
     <td>week 4</td> <td>GANs</td> 
     <td>
-    
+    <a class=" inline_disabled" href="https://youtu.be/2nqtz3GzybQ">A</a>, <a class=" inline_disabled" href="https://youtu.be/Ydk-GqUMQQM">B</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture07.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td> <td>Graph models</td> 
+    <td></td> <td>Learning with Graphs</td> 
     <td>
-    
+    <a href="https://www.youtube.com/playlist?list=PLIXJ-Sacf8u5IU-oyWn5bwF6c8XcR1TAR">playlist</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture08.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>week 5</td> <td>Reinforcement learning</td> 
+    <td>week 5</td> <td>Reinforcement learning 1</td> 
     <td>
-    
+    <a class=" inline_disabled" href="https://www.youtube.com/watch?v=t1I4NQTRXA0">A</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=6KzJ1bpcNC4">B</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=PikByfX0p80">C</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture09.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td> <td>Autoregressive models and Flows</td> 
+    <td></td> <td>Autoregressive and Flow-based models</td> 
     <td>
-    
+    <a class=" inline_disabled" href="https://youtu.be/_VPnu55UMCk">A</a>, <a class=" inline_disabled" href="https://youtu.be/d_h6kY0s9yI">B</a>, <a class=" inline_disabled" href="https://youtu.be/Rhx6W3dGvK8">C</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture10.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>Week 6</td> <td>Deep reinforcement learning</td> 
+    <td>Week 6</td> <td>Reinforcement learning 2</td> 
     <td>
-    
+    <a class=" inline_disabled" href="https://www.youtube.com/watch?v=mCVkLU2x4xY">A</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=ItI_gMuT5hw">B</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=zNCq1r4qI4Q">C</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture11.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td> <td>Transformers & self attention</td> <td></td> <td></td>
+    <td>Transformers & self attention</td> 
+    <td><a class=" inline_disabled" href="https://youtu.be/KmAISyVvE1Y">A</a>, <a class=" inline_disabled" href="https://youtu.be/oUhGZMCTHtI">B</a>, <a class=" inline_disabled" href="https://youtu.be/MN__lSncZBs">C</a></td> 
+    <td><a href="/slides/dlvu.lecture12.pdf">pdf</a></td>
   </tr>  
-
-  <tr>
-    <td>Week 7</td> <td>Guest lecture</td> 
-    <td>
-    
-    </td> 
-    <td>    <a href="/slides/dlvu.lecture12.pdf">pdf</a></td>
-  </tr>
-  <tr>
-    <td></td> <td>Guest lecture</td> <td></td> <td></td>
-  </tr>  
+ 
 </table>
 
