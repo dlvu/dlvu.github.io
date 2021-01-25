@@ -38,9 +38,9 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture03.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td>    <td>Common techniques</td> 
+    <td></td>    <td>Tools of the trade</td> 
     <td>
-    
+    <a class=" inline_disabled" href="https://youtu.be/EE5jTGP7wrM">A</a>, <a class=" inline_disabled" href="https://youtu.be/ixI83iX7TV4">B</a>, <a class=" inline_disabled" href="https://youtu.be/uEvvs2YCxQk">C</a>, <a class=" inline_disabled" href="https://youtu.be/mX92C0s0q1Y">D</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture04.pdf">pdf</a></td>
   </tr>
