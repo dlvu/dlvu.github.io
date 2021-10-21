@@ -81,7 +81,16 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture07.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td> 
+    <td></td>
+	<td>Autoregressive and Flow-based models</td> 
+	<td>Jakub Tomczak</td>
+    <td>
+    <a class=" inline_disabled" href="https://youtu.be/_VPnu55UMCk">A</a>, <a class=" inline_disabled" href="https://youtu.be/d_h6kY0s9yI">B</a>, <a class=" inline_disabled" href="https://youtu.be/Rhx6W3dGvK8">C</a>
+    </td> 
+    <td>    <a href="/slides/dlvu.lecture10.pdf">pdf</a></td>
+  </tr>
+  <tr>
+    <td>week 5</td> 
     <td>Learning with Graphs</td>
 	    <td>Michael Cochez</td>
     <td>
@@ -90,7 +99,14 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture08.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>week 5</td> 
+    <td></td>
+    <td>Transformers & self attention</td> 
+    <td>Peter Bloem</td>
+    <td><a class=" inline_disabled" href="https://youtu.be/KmAISyVvE1Y">A</a>, <a class=" inline_disabled" href="https://youtu.be/oUhGZMCTHtI">B</a>, <a class=" inline_disabled" href="https://youtu.be/MN__lSncZBs">C</a></td> 
+    <td><a href="/slides/dlvu.lecture12.pdf">pdf</a></td>
+  </tr>
+  <tr>
+    <td>Week 6</td> 
     <td>Reinforcement learning 1</td> 
 	    <td>Emile van Krieken</td>
     <td>
@@ -99,27 +115,13 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture09.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td> <td>Autoregressive and Flow-based models</td> 
-	<td>Jakub Tomczak</td>
-    <td>
-    <a class=" inline_disabled" href="https://youtu.be/_VPnu55UMCk">A</a>, <a class=" inline_disabled" href="https://youtu.be/d_h6kY0s9yI">B</a>, <a class=" inline_disabled" href="https://youtu.be/Rhx6W3dGvK8">C</a>
-    </td> 
-    <td>    <a href="/slides/dlvu.lecture10.pdf">pdf</a></td>
-  </tr>
-  <tr>
-    <td>Week 6</td> <td>Reinforcement learning 2</td>
+    <td></td>
+	<td>Reinforcement learning 2</td>
     <td>Emile van Krieken</td> 
     <td>
     <a class=" inline_disabled" href="https://www.youtube.com/watch?v=mCVkLU2x4xY">A</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=ItI_gMuT5hw">B</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=zNCq1r4qI4Q">C</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture11.pdf">pdf</a></td>
   </tr>
-  <tr>
-    <td></td>
-    <td>Transformers & self attention</td> 
-    <td>Peter Bloem</td>
-    <td><a class=" inline_disabled" href="https://youtu.be/KmAISyVvE1Y">A</a>, <a class=" inline_disabled" href="https://youtu.be/oUhGZMCTHtI">B</a>, <a class=" inline_disabled" href="https://youtu.be/MN__lSncZBs">C</a></td> 
-    <td><a href="/slides/dlvu.lecture12.pdf">pdf</a></td>
-  </tr>  
-</table>
 
+</table>
