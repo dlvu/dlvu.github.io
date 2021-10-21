@@ -100,13 +100,13 @@ If you are a registered student, please refer to the Canvas page instead.
   </tr>
   <tr>
     <td></td>
-    <td>Transformers & self attention</td> 
+    <td>Transformers & self-attention</td> 
     <td>Peter Bloem</td>
     <td><a class=" inline_disabled" href="https://youtu.be/KmAISyVvE1Y">A</a>, <a class=" inline_disabled" href="https://youtu.be/oUhGZMCTHtI">B</a>, <a class=" inline_disabled" href="https://youtu.be/MN__lSncZBs">C</a></td> 
     <td><a href="/slides/dlvu.lecture12.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>Week 6</td> 
+    <td>week 6</td> 
     <td>Reinforcement learning 1</td> 
 	    <td>Emile van Krieken</td>
     <td>
