@@ -20,7 +20,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>Introduction</td> 
     <td>Jakub Tomczak</td>
     <td>
-    <a class=" inline_disabled" href="https://www.youtube.com/watch?v=nZlHf4V_kic&amp;feature=youtu.be">A</a>, <a class=" inline_disabled" href="https://youtu.be/i7-nhWSFsZ8">B</a>, <a class=" inline_disabled" href="https://youtu.be/uk3TGBQqMtU">C</a>, <a class=" inline_disabled" href="https://youtu.be/I5lJ7Z-rL1A">D</a> 
+    <a class=" inline_disabled" href="https://youtu.be/vTyZH8oqTec">A</a>, <a class=" inline_disabled" href="https://youtu.be/i7-nhWSFsZ8">B</a>, <a class=" inline_disabled" href="https://youtu.be/uk3TGBQqMtU">C</a>, <a class=" inline_disabled" href="https://youtu.be/I5lJ7Z-rL1A">D</a> 
     </td> 
     <td>
     <a href="/slides/dlvu.lecture01.pdf">pdf</a>
