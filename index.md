@@ -36,13 +36,22 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture02.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>week 2 </td> 
+    <td></td> 
 	<td>Convolutional Neural Networks</td> 
     <td>Michael Cochez</td>	
     <td>
     <a class=" inline_disabled" href="https://youtu.be/rOuF5r5GduQ">A</a>, <a class=" inline_disabled" href="https://youtu.be/VQqayqUCTwM">B</a>, <a class=" inline_disabled" href="https://youtu.be/Q7KekwUricc">C</a>, <a class=" inline_disabled" href="https://youtu.be/2hS_54kgMHs">D</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture03.pdf">pdf</a></td>
+  </tr>
+ <tr>
+    <td>week 2 </td>
+    <td>Sequential data</td>
+    <td>Peter Bloem</td>
+    <td>
+    <a class=" inline_disabled" href="https://youtu.be/rK20XfDN1N4">A</a>, <a class=" inline_disabled" href="https://youtu.be/2JGlmBhQedk">B</a>, <a class=" inline_disabled" href="https://youtu.be/fbTCvvICk8M">C</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=rT77lBfAZm4&amp;ab_channel=DLVU">D</a>, <a class=" inline_disabled" href="https://youtu.be/csAlW9HmwAQ">E</a>*
+    </td> 
+    <td>    <a href="/slides/dlvu.lecture05.pdf">pdf</a></td>
   </tr>
   <tr>
     <td></td>    
@@ -54,16 +63,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture04.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>week 3</td>
-    <td>Sequential data</td>
-    <td>Peter Bloem, David Romero</td>
-    <td>
-    <a class=" inline_disabled" href="https://youtu.be/rK20XfDN1N4">A</a>, <a class=" inline_disabled" href="https://youtu.be/2JGlmBhQedk">B</a>, <a class=" inline_disabled" href="https://youtu.be/fbTCvvICk8M">C</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=rT77lBfAZm4&amp;ab_channel=DLVU">D</a>, <a class=" inline_disabled" href="https://youtu.be/csAlW9HmwAQ">E</a>*
-    </td> 
-    <td>    <a href="/slides/dlvu.lecture05.pdf">pdf</a></td>
-  </tr>
-  <tr>
-    <td></td> 
+    <td>week 3 </td> 
     <td>Latent Variable Models (pPCA and VAE)</td> 
     <td>Jakub Tomczak</td>
     <td>
@@ -72,7 +72,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture06.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td>week 4</td> 
+    <td></td> 
     <td>GANs</td> 
     <td>Jakub Tomczak</td>
     <td>
@@ -81,16 +81,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture07.pdf">pdf</a></td>
   </tr>
   <tr>
-    <td></td>
-	<td>Autoregressive and Flow-based models</td> 
-	<td>Jakub Tomczak</td>
-    <td>
-    <a class=" inline_disabled" href="https://youtu.be/_VPnu55UMCk">A</a>, <a class=" inline_disabled" href="https://youtu.be/d_h6kY0s9yI">B</a>, <a class=" inline_disabled" href="https://youtu.be/Rhx6W3dGvK8">C</a>
-    </td> 
-    <td>    <a href="/slides/dlvu.lecture10.pdf">pdf</a></td>
-  </tr>
-  <tr>
-    <td>week 5</td> 
+    <td>week 4</td> 
     <td>Learning with Graphs</td>
 	    <td>Michael Cochez</td>
     <td>
@@ -105,9 +96,9 @@ If you are a registered student, please refer to the Canvas page instead.
     <td><a class=" inline_disabled" href="https://youtu.be/KmAISyVvE1Y">A</a>, <a class=" inline_disabled" href="https://youtu.be/oUhGZMCTHtI">B</a>, <a class=" inline_disabled" href="https://youtu.be/MN__lSncZBs">C</a></td> 
     <td><a href="/slides/dlvu.lecture12.pdf">pdf</a></td>
   </tr>
-  <tr>
-    <td>week 6</td> 
-    <td>Reinforcement learning 1</td> 
+<tr>
+    <td>week 5</td> 
+    <td>Reinforcement learning</td> 
 	    <td>Emile van Krieken</td>
     <td>
     <a class=" inline_disabled" href="https://www.youtube.com/watch?v=t1I4NQTRXA0">A</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=6KzJ1bpcNC4">B</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=PikByfX0p80">C</a>
@@ -116,12 +107,20 @@ If you are a registered student, please refer to the Canvas page instead.
   </tr>
   <tr>
     <td></td>
-	<td>Reinforcement learning 2</td>
+	<td>Reinforcement learning (extra)</td>
     <td>Emile van Krieken</td> 
     <td>
     <a class=" inline_disabled" href="https://www.youtube.com/watch?v=mCVkLU2x4xY">A</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=ItI_gMuT5hw">B</a>, <a class=" inline_disabled" href="https://www.youtube.com/watch?v=zNCq1r4qI4Q">C</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture11.pdf">pdf</a></td>
   </tr>
-
+  <tr>
+    <td></td>
+	<td>Autoregressive and Flow-based models</td> 
+	<td>Jakub Tomczak</td>
+    <td>
+    <a class=" inline_disabled" href="https://youtu.be/_VPnu55UMCk">A</a>, <a class=" inline_disabled" href="https://youtu.be/d_h6kY0s9yI">B</a>, <a class=" inline_disabled" href="https://youtu.be/Rhx6W3dGvK8">C</a>
+    </td> 
+    <td>    <a href="/slides/dlvu.lecture10.pdf">pdf</a></td>
+  </tr>
 </table>
