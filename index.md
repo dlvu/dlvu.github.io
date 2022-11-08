@@ -31,7 +31,7 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>Backpropagation</td> 
     <td>Peter Bloem</td>
   <td>
-    <a class=" inline_disabled" href="https://youtu.be/COhjLwjEpGM">A</a>, <a class=" inline_disabled" href="https://youtu.be/idO5r5eWIrw">B</a>, <a class=" inline_disabled" href="https://youtu.be/dxZ8a-oIu7U">C</a>, <a class=" inline_disabled" href="https://youtu.be/UpLtbV4L6PI">D</a>
+    <a class=" inline_disabled" href="https://youtu.be/COhjLwjEpGM">A</a>, <a class=" inline_disabled" href="https://youtu.be/idO5r5eWIrw">B</a>, <a class=" inline_disabled" href="https://youtu.be/O-xs8IyP4bQ">C</a>, <a class=" inline_disabled" href="https://youtu.be/UpLtbV4L6PI">D</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture02.pdf">pdf</a></td>
   </tr>
