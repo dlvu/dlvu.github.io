@@ -40,7 +40,7 @@ If you are a registered student, please refer to the Canvas page instead.
 	<td>Convolutional Neural Networks</td> 
     <td>Michael Cochez</td>	
     <td>
-    <a class=" inline_disabled" href="https://youtu.be/rOuF5r5GduQ">A</a>, <a class=" inline_disabled" href="https://youtu.be/VQqayqUCTwM">B</a>, <a class=" inline_disabled" href="https://youtu.be/Q7KekwUricc">C</a>, <a class=" inline_disabled" href="https://youtu.be/2hS_54kgMHs">D</a>
+    <a class=" inline_disabled" href="https://youtu.be/rOuF5r5GduQ">A</a>, <a class=" inline_disabled" href="https://youtu.be/VQqayqUCTwM">B</a>, <a class=" inline_disabled" href="https://youtu.be/Q7KekwUricc">C</a>, <a class=" inline_disabled" href="https://youtu.be/9H-o8wESCxI">D</a>
     </td> 
     <td>    <a href="/slides/dlvu.lecture03.pdf">pdf</a></td>
   </tr>
