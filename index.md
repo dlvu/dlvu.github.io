@@ -3,10 +3,30 @@ layout: default
 title: Deep Learning @ VU
 ---
 
-This page contains all public information about the course _Deep Learning_ at the Vrije Universiteit Amsterdam. 
+{::nomarkdown}
 
-If you are a registered student, please refer to the Canvas page instead. 
- 
+<nav class="lectures">
+
+<div class="l1"><a href="/1_introduction">
+ <h3 class="red"><span>1.</span>Introduction</h3>
+</a>
+</div>
+
+<div class="l2"><a href="/2_backpropagation">
+ <h3 class="orange"><span>2.</span>Backpropagation</h3>
+</a>
+</div>
+
+</nav>
+
+{:/nomarkdown}
+
+## All content
+
+\# TODO: update with this year's content
+
+{::nomarkdown}
+
 <table>
   <tr>
    <th></th>
@@ -124,3 +144,4 @@ If you are a registered student, please refer to the Canvas page instead.
     <td>    <a href="/slides/dlvu.lecture10.pdf">pdf</a></td>
   </tr>
 </table>
+{:/nomarkdown}
