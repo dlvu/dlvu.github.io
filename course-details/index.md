@@ -8,7 +8,7 @@ slides: true
         <li class="name">Course Details</li>
                 <li><a href="#video-000">Details</a></li>
                 <li><a href="#slide-012">Tips and tricks</a></li>
-        <li class="pdf"><a href="-">PDF</a></li>
+        <li class="pdf"><a href="https://dlvu.github.io/pdfs/lecture0.course-details.annotated.pdf">PDF</a></li>
     </ul>
 </nav>
 
