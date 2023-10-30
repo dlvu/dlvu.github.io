@@ -7,12 +7,12 @@ title: Deep Learning @ VU
 
 <nav class="lectures">
 
-<div class="l1"><a href="/1_introduction">
+<div class="l1"><a href="/introduction">
  <h3 class="red"><span>1.</span>Introduction</h3>
 </a>
 </div>
 
-<div class="l2"><a href="/2_backpropagation">
+<div class="l2"><a href="/backpropagation">
  <h3 class="orange"><span>2.</span>Backpropagation</h3>
 </a>
 </div>
