@@ -9,7 +9,7 @@ slides: true
                 <li><a href="#video-000">Neural networks</a></li>
                 <li><a href="#video-020">Classification and regression</a></li>
                 <li><a href="#video-034">Autoencoders</a></li>
-        <li class="pdf"><a href="-">PDF</a></li>
+        <li class="pdf"><a href="https://dlvu.github.io/pdfs/lecture01.introduction.annotated.pdf">PDF</a></li>
     </ul>
 </nav>
 

@@ -13,7 +13,12 @@ title: Deep Learning @ VU
 </div>
 
 <div class="l2"><a href="/backpropagation">
- <h3 class="orange"><span>2.</span>Backpropagation</h3>
+ <h3 class="green"><span>2.</span>Backpropagation</h3>
+</a>
+</div>
+
+<div class="l3"><a href="/cnns">
+ <h3 class="orange"><span>3.</span>Convolutions</h3>
 </a>
 </div>
 
@@ -21,9 +26,7 @@ title: Deep Learning @ VU
 
 {:/nomarkdown}
 
-## All content
-
-\# TODO: update with this year's content
+## Last year's content
 
 {::nomarkdown}
 
