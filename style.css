@@ -1138,3 +1138,14 @@ nav.lectures div.l1::before {
     background-size: 375%;
 }
 
+nav.lectures div.l2::before {
+    background-image: url('/backpropagation/lecture02.backpropagation.key-stage-0085.svg');
+    background-position: -2.1em 14.4em;
+    background-size: 268%;
+}
+
+nav.lectures div.l2::before {
+    background-image: url('/cnns/lecture02.backpropagation.key-stage-0085.svg');
+    background-position: -2.1em 14.4em;
+    background-size: 268%;
+}
