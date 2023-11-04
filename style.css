@@ -1155,3 +1155,10 @@ nav.lectures div.l4::before {
     background-position: -30.1em 20.4em;
     background-size: 358%;
 }
+
+nav.lectures div.l5::before {
+    background-image: url('/sequences/lecture05.sequences.key-stage-0020.svg');
+    background-position: -54.1em -8.6em;
+    background-size: 798%;
+}
+

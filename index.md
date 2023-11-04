@@ -10,7 +10,7 @@ title: Deep Learning @ VU
 <!-- NB: The course details should not be linked from the home page -->
 
 <div class="l1"><a href="/introduction">
- <h3 class="red"><span>1. </span>Introduction</h3>
+ <h3 class="blue"><span>1. </span>Introduction</h3>
 </a>
 </div>
 
@@ -25,7 +25,12 @@ title: Deep Learning @ VU
 </div>
 
 <div class="l4"><a href="/tools">
- <h3 class="red"><span>4. </span>Tools of the trade</h3>
+ <h3 class="blue"><span>4. </span>Tools of the trade</h3>
+</a>
+</div>
+
+<div class="l5"><a href="/sequences">
+ <h3 class="orange"><span>5. </span>Sequences</h3>
 </a>
 </div>
 
