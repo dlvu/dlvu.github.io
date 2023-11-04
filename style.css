@@ -1145,7 +1145,13 @@ nav.lectures div.l2::before {
 }
 
 nav.lectures div.l3::before {
-    background-image: url('/cnns/lecture02.backpropagation.key-stage-0085.svg');
-    background-position: -2.1em 14.4em;
-    background-size: 268%;
+    background-image: url('/cnns/slide_0007.svg');
+    background-position: -11.0em 17.4em;
+    background-size: 505%;
+}
+
+nav.lectures div.l4::before {
+    background-image: url('/tools/lecture04.tools.key-stage-0066.svg');
+    background-position: -30.1em 20.4em;
+    background-size: 358%;
 }
