@@ -34,9 +34,9 @@ title: Deep Learning @ VU
 </a>
 </div>
 
-<div class="l6"><span class="soon">
+<div class="l6"><a href="/vae">
  <h3 class="blue"><span>6. </span>Latent variable models</h3>
-</span>
+</a>
 </div>
 
 <div class="l7"><span class="soon">

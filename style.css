@@ -1171,6 +1171,12 @@ nav.lectures div.l5::before {
     background-size: 798%;
 }
 
+nav.lectures div.l6::before {
+    background-image: url('/vae/slide_0012_animation_1.svg');
+    background-position: -136.1em -14em;
+    background-size: 509%;
+}
+
 nav.lectures div.l8::before {
     background-image: url('/graphs/slide_0076.svg');
     background-position: -104.1em -223px;
