@@ -34,6 +34,21 @@ title: Deep Learning @ VU
 </a>
 </div>
 
+<div class="l6"><span class="soon">
+ <h3 class="blue"><span>6. </span>Latent variable models</h3>
+</span>
+</div>
+
+<div class="l7"><span class="soon">
+ <h3 class="red"><span>7. </span>Unsupervised representation learning</h3>
+</span>
+</div>
+
+<div class="l8"><a href="/graphs">
+ <h3 class="orange"><span>8. </span>Graphs</h3>
+</a>
+</div>
+
 </nav>
 
 {:/nomarkdown}

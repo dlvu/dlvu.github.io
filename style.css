@@ -1091,13 +1091,22 @@ nav.lectures div a {
     height: 100%;
     mix-blend-mode: normal;
     border-top: 1px transparent solid;
-
 }
 
-#body nav.lectures div a h3 {
+nav.lectures div span.soon {
+    display: block;
+    height: 100%;
+    mix-blend-mode: normal;
+    border-top: 1px transparent solid;
+
+    filter: grayscale(1.0) blur(2px) opacity(25%);
+}
+
+#body nav.lectures div a h3,
+ #body nav.lectures div span.soon h3{
     margin: calc(50% - 1.2em) 0.1em 0 0.1em;
     text-shadow: 1px 1px #fffe;
-    text-align: center
+    text-align: center;
 }
 
 nav.lectures div a h3 span {
@@ -1162,3 +1171,8 @@ nav.lectures div.l5::before {
     background-size: 798%;
 }
 
+nav.lectures div.l8::before {
+    background-image: url('/graphs/slide_0076.svg');
+    background-position: -104.1em -223px;
+    background-size: 403%;
+}
