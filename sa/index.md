@@ -6,6 +6,9 @@ slides: true
     <ul>
         <li class="home"><a href="/">Home</a></li>
         <li class="name">Self-attention</li>
+                <li><a href="#video-002">Self-attention</a></li>
+                <li><a href="#video-028">Transformers</a></li>
+                <li><a href="#video-048">Famous transformers</a></li>
                 <li><a href="#video-072">Scaling up</a></li>
         <li class="pdf"><a href="https://dlvu.github.io/pdfs/lecture09.self-attention.annotated.pdf">PDF</a></li>
     </ul>
@@ -40,13 +43,25 @@ slides: true
 
 
 
+       <section class="video" id="video-002">
+           <a class="slide-link" href="https://dlvu.github.io/sa#video-2">link here</a>
+           <iframe
+                src="https://www.youtube.com/embed/KmAISyVvE1Y?si=iTI_8dul_vIbCS3u"
+                title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+           </iframe>
+
+       </section>
+
+
 
        <section id="slide-003">
             <a class="slide-link" href="https://dlvu.github.io/sa#slide-003" title="Link to this slide.">link here</a>
             <img src="lecture09.self-attention.key-stage-0003.svg" class="slide-image" />
 
             <figcaption>
-            <p    ></p>
+            <p    ><br></p><p    ></p><p    ></p>
             </figcaption>
        </section>
 
@@ -383,13 +398,25 @@ slides: true
 
 
 
+       <section class="video" id="video-028">
+           <a class="slide-link" href="https://dlvu.github.io/sa#video-28">link here</a>
+           <iframe
+                src="https://www.youtube.com/embed/oUhGZMCTHtI?si=50SqAJ9u9uyArZKB"
+                title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+           </iframe>
+
+       </section>
+
+
 
        <section id="slide-029">
             <a class="slide-link" href="https://dlvu.github.io/sa#slide-029" title="Link to this slide.">link here</a>
             <img src="lecture09.self-attention.key-stage-0030.svg" class="slide-image" />
 
             <figcaption>
-            <p    >A recurrent neural network is any neural network that has a cycle in it</p><p    ></p>
+            <p    ><br></p><p    ></p><p    ></p>
             </figcaption>
        </section>
 
@@ -649,13 +676,25 @@ slides: true
 
 
 
+       <section class="video" id="video-048">
+           <a class="slide-link" href="https://dlvu.github.io/sa#video-48">link here</a>
+           <iframe
+                src="https://www.youtube.com/embed/MN__lSncZBs?si=MHM6hT7vI5jltbaN"
+                title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+           </iframe>
+
+       </section>
+
+
 
        <section id="slide-049">
             <a class="slide-link" href="https://dlvu.github.io/sa#slide-049" title="Link to this slide.">link here</a>
             <img src="lecture09.self-attention.key-stage-0050.svg" class="slide-image" />
 
             <figcaption>
-            <p    >A recurrent neural network is any neural network that has a cycle in it</p><p    ></p>
+            <p    ><br></p><p    ></p><p    ></p>
             </figcaption>
        </section>
 

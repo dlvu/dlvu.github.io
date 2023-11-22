@@ -1182,3 +1182,9 @@ nav.lectures div.l8::before {
     background-position: -104.1em -223px;
     background-size: 403%;
 }
+
+nav.lectures div.l9::before {
+    background-image: url('/sa/lecture09.self-attention.key-stage-0050.svg');
+    background-position: -132.1em -354px;
+    background-size: 240%;
+}

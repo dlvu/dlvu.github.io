@@ -49,6 +49,11 @@ title: Deep Learning @ VU
 </a>
 </div>
 
+<div class="l9"><a href="/sa">
+ <h3 class="blue"><span>9. </span>Self-attention</h3>
+</a>
+</div>
+
 </nav>
 
 {:/nomarkdown}
