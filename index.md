@@ -54,6 +54,27 @@ title: Deep Learning @ VU
 </a>
 </div>
 
+<div class="l10"><span class="soon">
+ <h3 class="red"><span>10. Reinforcement learning</span></h3>
+</span>
+</div>
+
+<div class="l11"><a href="/sa">
+ <h3 class="blue"><span>11. </span>Diffusion</h3>
+</a>
+</div>
+
+<div class="l12"><span class="soon">
+ <h3 class="red"><span>12. Generalization</span></h3>
+</span>
+</div>
+
+<div class="l13"><span class="soon">
+ <h3 class="red"><span>13. Explainability</span></h3>
+</span>
+</div>
+
+
 </nav>
 
 {:/nomarkdown}

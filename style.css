@@ -1188,3 +1188,9 @@ nav.lectures div.l9::before {
     background-position: -132.1em -354px;
     background-size: 240%;
 }
+
+nav.lectures div.l11::before {
+    background-image: url('/diffusion/lecture11.diffusion.key-stage-0002.svg');
+    background-position: -147.1em -2em;
+    background-size: 454%;
+}
