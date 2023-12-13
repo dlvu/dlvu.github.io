@@ -59,7 +59,7 @@ title: Deep Learning @ VU
 </span>
 </div>
 
-<div class="l11"><a href="/sa">
+<div class="l11"><a href="/diffusion">
  <h3 class="blue"><span>11. </span>Diffusion</h3>
 </a>
 </div>
