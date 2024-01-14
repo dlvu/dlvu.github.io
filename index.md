@@ -99,9 +99,7 @@ title: Deep Learning @ VU
   </tr>
   
   <tr>
-
-  <tr>
-   <td rowspan="3">w1</td>
+    <td rowspan="3">w1</td>
     <td>
       <h3>1. Introduction </h3>
       <ul class="videos">
@@ -126,6 +124,7 @@ title: Deep Learning @ VU
     <td>Peter Bloem</td>
     <td><a href="https://www.youtube.com/watch?v=idO5r5eWIrw&list=PLIXJ-Sacf8u7YQ77QmD5rFgAlDgFLqZ4b&index=4&ab_channel=DLVU">playlist</a><br><a href="./pdfs/lecture02.backpropagation.annotated.pdf">pdf</a> 
   </tr>
+
   <tr>
     <td>
       <h3>3. Convolutions </h3>
@@ -141,7 +140,7 @@ title: Deep Learning @ VU
   </tr>
 
   <tr>
-   <td rowspan="3">w2</td>
+   <td rowspan="2">w2</td>
     <td>
       <h3>3. Tools of the trade </h3>
       <ul class="videos">
@@ -170,7 +169,7 @@ title: Deep Learning @ VU
   </tr>
 
   <tr>
-   <td rowspan="3">w3</td>
+   <td rowspan="2">w3</td>
     <td>
       <h3>6. Latent Variable Models </h3>
       <ul class="videos">
@@ -197,7 +196,7 @@ title: Deep Learning @ VU
   </tr>
 
   <tr>
-   <td rowspan="3">w4</td>
+   <td rowspan="2">w4</td>
     <td>
       <h3>8. Learning with graphs </h3>
       <ul class="videos">
@@ -226,7 +225,7 @@ title: Deep Learning @ VU
   </tr>
 
   <tr>
-   <td rowspan="3">w5</td>
+   <td rowspan="1">w5</td>
     <td>
       <h3>10. Reinforcement learning </h3>
     </td>
@@ -236,7 +235,7 @@ title: Deep Learning @ VU
   </tr>
 
   <tr>
-   <td rowspan="3">w6</td>
+   <td rowspan="2">w6</td>
     <td>
       <h3>11. Diffusion models </h3>
       <ul class="videos">
