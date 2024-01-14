@@ -39,7 +39,7 @@ title: Deep Learning @ VU
 </a>
 </div>
 
-<div class="l7"><span class="soon">
+<div class="l7"><span class="/repr">
  <h3 class="red"><span>7. </span>Unsupervised representation learning</h3>
 </span>
 </div>
@@ -54,7 +54,7 @@ title: Deep Learning @ VU
 </a>
 </div>
 
-<div class="l10"><span class="soon">
+<div class="l10"><span class="/pdfs/lecture10.reinforcementlearning.pdf">
  <h3 class="red"><span>10. Reinforcement learning</span></h3>
 </span>
 </div>
@@ -64,7 +64,7 @@ title: Deep Learning @ VU
 </a>
 </div>
 
-<div class="l12"><span class="soon">
+<div class="l12"><span class="/generalization">
  <h3 class="red"><span>12. Generalization</span></h3>
 </span>
 </div>
@@ -167,6 +167,99 @@ title: Deep Learning @ VU
     </td>
     <td>Peter Bloem, David Romero</td>
     <td><a href="https://www.youtube.com/playlist?list=PLIXJ-Sacf8u4koFI1FzdM6KYVDCLhaepZ">playlist</a><br><a href="./pdfs/lecture05.sequences.annotated.pdf">pdf</a> 
+  </tr>
+
+  <tr>
+   <td rowspan="3">w3</td>
+    <td>
+      <h3>6. Latent Variable Models </h3>
+      <ul class="videos">
+      <li><a href="./vae/#video-002">6.1 Why Generative Modeling</a></li>
+      <li><a href="./vae/#video-014">6.2 Autoencoders</a></li>
+      <li><a href="./vae/#video-023">6.3 Variational Autoencoders</a></li>
+      </ul>
+    </td>
+    <td>Shujian Yu</td>
+    <td><a href="./pdfs/lecture06.latentvariablemodels.annotated.pdf">pdf</a> 
+  </tr>
+  <tr>
+    <td>
+      <h3>7. Unsupervised representation learning </h3>
+      <ul class="videos">
+      <li><a href="./repr/#video-000">7.0 Introduction</a></li>
+      <li><a href="./repr/#video-008">7.1 VAE Implementation</a></li>
+      <li><a href="./repr/#video-023">7.2 KL Divergence</a></li>
+      <li><a href="./repr/#video-035">7.3 MMD-VAE</a></li>
+      </ul>
+    </td>
+    <td>Shujian Yu</td>
+    <td><a href="./pdfs/lecture07.UnsupervisedRepresentation.unannotated.pdf">pdf</a> 
+  </tr>
+
+  <tr>
+   <td rowspan="3">w4</td>
+    <td>
+      <h3>8. Learning with graphs </h3>
+      <ul class="videos">
+      <li><a href="./graphs/#video-002">8.1 Introduction - Graphs (1A)</a></li>
+      <li><a href="./graphs/#video-017">8.2 Introduction - Embeddings (1B)</a></li>
+      <li><a href="./graphs/#video-025">8.3 Graph Embedding Techniques</a></li>
+      <li><a href="./graphs/#video-048">8.4 Graph Neural Networks</a></li>
+      <li><a href="./graphs/#video-064">8.5 Query embedding</a></li>
+      </ul>
+    </td>
+    <td>Michael Cochez</td>
+    <td><a href="https://www.youtube.com/playlist?list=PLIXJ-Sacf8u5IU-oyWn5bwF6c8XcR1TAR">playlist</a><br><a href="./pdfs/lecture08.graphs.annotated.pdf">pdf</a> 
+  </tr>
+  <tr>
+    <td>
+      <h3>9. Transformers and self-attention </h3>
+      <ul class="videos">
+      <li><a href="./sa/#video-002">9.1 Self-attention</a></li>
+      <li><a href="./sa/#video-028">9.2 Transformers</a></li>
+      <li><a href="./sa/#video-048">9.3 Famous transformers</a></li>
+      <li><a href="./sa/#video-072">9.4 Scaling up</a></li>
+      </ul>
+    </td>
+    <td>Peter Bloem</td>
+    <td><a href="https://www.youtube.com/playlist?list=PLIXJ-Sacf8u7UwAsGYFR1952pzQux5Lb1">playlist</a><br><a href="./pdfs/lecture09.self-attention.annotated.pdf">pdf</a> 
+  </tr>
+
+  <tr>
+   <td rowspan="3">w5</td>
+    <td>
+      <h3>10. Reinforcement learning </h3>
+    </td>
+    <td>Vincent Francois-Lavet</td>
+    <td><a href="./pdfs/lecture10.reinforcementlearning.pdf">pdf</a> 
+   </tr>
+  </tr>
+
+  <tr>
+   <td rowspan="3">w6</td>
+    <td>
+      <h3>11. Diffusion models </h3>
+      <ul class="videos">
+      <li><a href="./diffusion/#video-005">11.1 Naive diffusion</a></li>
+      <li><a href="./diffusion/#video-022">11.2 Understanding Gaussians</a></li>
+      <li><a href="./diffusion/#video-049">11.3 Gaussian diffusion</a></li>
+      </ul>
+    </td>
+    <td>Peter Bloem</td>
+    <td><a href="https://www.youtube.com/watch?v=mCVkLU2x4xY&list=PLIXJ-Sacf8u4Nq3vmR1Nde9UlKiPaecEA&pp=iAQB">playlist</a><br><a href="./pdfs/lecture11.diffusion.annotated.pdf">pdf</a> 
+  </tr>
+  <tr>
+    <td>
+      <h3>12. Generalization </h3>
+      <ul class="videos">
+      <li><a href="./generalization/#video-000">12.0 Introduction</a></li>
+      <li><a href="./generalization/#video-002">12.1 Review</a></li>
+      <li><a href="./generalization/#video-017">12.2 Problem</a></li>
+      <li><a href="./generalization/#video-028">12.3 Generalization Bound</a></li>
+      </ul>
+    </td>
+    <td>Shujian Yu</td>
+    <td><a href="./pdfs/lecture12.generalization.pdf">pdf</a> 
   </tr>
 
 </table>
