@@ -1242,4 +1242,61 @@ slides: true
        </section>
 
 
+
+
+
+       <section id="slide-079">
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-079" title="Link to this slide.">link here</a>
+            <img src="slide_0079.svg" class="slide-image" />
+
+            <figcaption>
+            <p>|section-nv|Backpropagating Convolutions|</p><br><br><p>In these few slides, we will go through how a convolution operator is implemented in an automatic differentiation system.
+</p><br><p>If you are following the lecture for the first time, you may skip this part, but if you do the CNN part in assignment 3, this will become relevant.
+</p><br><br><br>
+            </figcaption>
+       </section>
+
+
+
+
+
+       <section id="slide-080">
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-080" title="Link to this slide.">link here</a>
+            <img src="slide_0080.svg" class="slide-image" />
+
+            <figcaption>
+            <p>The forward function is very simple to state in scalar terms: Every element of the output vector is just a dot product of a small part of the input (</p><p><span style="color: rgb(122,148,71)">a </span></p><p><span style="color: rgb(122,148,71)">patch</span></p><p>) and the parameters of </p><p><span style="color: rgb(102,79,129)">our kernel</span></p><p>.</p><br><p>To vectorize this, we can just take all these patches, stack them together in</p><p><span style="color: rgb(122,148,71)"> a matrix</span></p><p>, and compute all </p><p><span style="color: rgb(60,136,157)">the dot products </span></p><p>in a single matrix multiplication.</p><br><p>This operation of slicing out the patches is one of the rare operations for which we can't make do with standard linear algebra operators. The problem is that the patches overlap. We need a function that slices out the right overlapping patches from the input x (the points at which we apply the kernel), and arranges them in a matrix. We call this function get_patches, and we’ll assume somebody has implemented it for us in an efficient way.</p><br><p>In pytorch, this function is called </p><p><strong>unfold</strong></p><p>.</p><br><p>Once we have this matrix, we can multiply it with k (using broadcasting) to get the result we need.</p><br>
+            </figcaption>
+       </section>
+
+
+
+
+
+       <section id="slide-081">
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-081" title="Link to this slide.">link here</a>
+            <img src="slide_0081.svg" class="slide-image" />
+
+            <figcaption>
+            <p>Next, we need to figure out the backward. As</p><p> we showed in the previous lecture</p><p>, we do this in scalar terms first and then vectorize. We first writ</p><p>e down the scalar derivative of the less wrt element i of our input k. Then we apply the multivariate chain rule, and assume that ∂l/∂y</p><p>t</p><p> is given. Then (at the end of line2) we fill in the definition of the convolution operator for element t of </p><p><strong>y</strong></p><p>. In line 3, we work the sum to the outside (left) and eliminate all terms that don't contain k</p><p>i</p><p> (right).
+</p><p>This tells us how to compute each individual element of </p><p><strong>k</strong></p><p>∇</p><p>. If we wrote our backward in a for loop this would be enough, but of course, we don't like for loops, we want to compute k in a single linear algebra operation, like a matrix multiplication.
+</p><br>
+            </figcaption>
+       </section>
+
+
+
+
+
+       <section id="slide-082">
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-082" title="Link to this slide.">link here</a>
+            <img src="slide_0082.svg" class="slide-image" />
+
+            <figcaption>
+            <p>To work out the vectorization, note first that the ith element of </p><p><strong>k</strong></p><p>∇ </p><p>is another dot product: of the output gradient, with a </p><p>patch</p><p> of the input.
+</p><br><p>This means that we can vectorize the backward with the same get_patches operation we used for the forward.</p><br>
+            </figcaption>
+       </section>
+
+
 </article>
