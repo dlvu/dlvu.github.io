@@ -2,6 +2,14 @@
 
 /* MLVU blue: #0365C0 */
 
+audio,
+canvas,
+progress,
+video {
+ display:inline-block;
+ vertical-align:baseline
+}
+
 html {
 	font-family:sans-serif;
 	-ms-text-size-adjust:100%;
@@ -923,6 +931,16 @@ article.slides {
 .slides section.video iframe {
     margin: 0 auto;
 }
+
+.slides section video {
+    width: 50%;
+    aspect-ratio: 16/9;
+    flex-grow: 0;
+
+    box-shadow: 0px 3px 6px #eee;
+    margin: 1em auto 1em auto;
+}
+
 
 .slides section .slide-link {
     position: absolute;

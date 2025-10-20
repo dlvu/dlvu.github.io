@@ -17,12 +17,11 @@ slides: true
 
        <section class="video" id="video-000">
            <a class="slide-link" href="https://dlvu.github.io/course-details#video-0">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/9dPKK6YJ9fg?si=Mj-j0c8oP94QjRQ3"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://surfdrive.surf.nl/index.php/s/NcX1nQ8YRTI5yZk/download" type="video/mp4" />
+
+                Download the <a href="https://surfdrive.surf.nl/index.php/s/NcX1nQ8YRTI5yZk/download">video</a>.
+           </video>
 
        </section>
 
@@ -33,7 +32,7 @@ slides: true
             <img src="lecture00.course-details.key-stage-0001.svg" class="slide-image" />
 
             <figcaption>
-            <p    ><br></p><p    >|video-html|https://surfdrive.surf.nl/files/index.php/s/DCSyuGGoWRgK6TN/download|<br></p><p    ></p><p    ></p>
+            <p    ><br></p><p    ></p><p    ></p>
             </figcaption>
        </section>
 
@@ -99,7 +98,7 @@ slides: true
             <img src="lecture00.course-details.key-stage-0006.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The idea of the assignments is that you start by learning how to build a neural network from scratch, without using any libraries. Then whenever you learn to do something yourself, you are allowed to use a library to make your life a little easier.<br></p><p    >There are four assignments, each worth 10 points, for a total of 40 points. Getting 21 points corresponds to a 5.5, so you that’s the minimum you need to get. The assignments are designed to take about 2 weeks to finish. Note however, that this differs a lot per student, especially for the first assignment, so you should start early, to find out if you may need a little more time.<br></p><p    >The deliverable is just a PDF of your answers. You may include snippets of your code in the PDF, but you don’t hand in your codebase. You are required to follow a specific template that we provide.</p><p    ></p>
+            <p    >The idea of the assignments is that you start by learning how to build a neural network from scratch, without using any libraries. Then whenever you learn to do something yourself, you are allowed to use a library to make your life a little easier.<br></p><p    >There are four assignments, each worth 10 points, for a total of 40 points. Getting 21 points corresponds to a 5.5, so that’s the minimum you need to get. The assignments are designed to take about 2 weeks to finish. Note however, that this differs a lot per student, especially for the first assignment, so you should start early, to find out if you may need a little more time.<br></p><p    >The deliverable is just a PDF of your answers. You may include snippets of your code in the PDF, but you don’t hand in your codebase. You are required to follow a specific template that we provide.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -125,7 +124,7 @@ slides: true
             <img src="lecture00.course-details.key-stage-0008.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The practicals are on Thursday or Friday. You can find the schedule on Canvas (under Pages &gt; Practicals) and you can sign up to a group of your choice (under People &gt; Practicals). There are no practicals in the first week, to allow you to focus on theory. We do, however, strongly recommend that you start on the assignment today, so you can get a sense of whether you are likely to struggle with it.<br></p><p    >You don’t have to have finished the assignment before the practical, but you should have <em>started</em>. Make sure to show up to the practical with questions ready, or at least knowing which parts of the assignment you have difficulty with.</p><p    ></p>
+            <p    >You can find the schedule for the practicals on Canvas (under Pages &gt; Practicals) and you can sign up to a group of your choice (under People &gt; Practicals). <br></p><p    >You don’t have to have finished the assignment before the practical, but you should have <em>started</em>. Make sure to show up to the practical with questions ready, or at least knowing which parts of the assignment you have difficulty with.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -164,7 +163,7 @@ slides: true
             <img src="lecture00.course-details.key-stage-0011.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Finally, if you’ve done the course before, you may notice some changes. <br></p><p    >First, We have a new coordinator and lecturer this year, Shujian.<br></p><aside    >We usually split the coordination duties between the three lecturers, but Shujian is the official person responsible for the course, and the person you should contact with any problems.<br></aside><p    >Second, we took this opportunity to review some of the material and change some of the lectures. This will be primarily in the second half. The changes in the first half are minimal. We are introducing some new topics as well, to keep up with the fast-moving field of deep learning.<br></p><p    >Third, we are committed this year to provide fully annotated slides for all lectures, so that you can read the material as well as watching the videos. We will offer these annotations in HTML on our website, together with the videos. This is a labor-intensive process, so please bear with us while we get everything ready. We’ll do our best to have each lecture prepared and online before its corresponding QA session.<br></p><p    ></p>
+            <p    ><br></p><p    >This is the first year that the course is an obligatory part of the AI program. You can choose whether to do it in the first or second year, but you have to do it at some point. <br></p><p    >This means we get a lot more students (roughly 300 instead of 200) but the pool of TAs (last year’s students) stays the same. In short, this is going to be a tricky, year, so we ask for your patience if some things don’t run as smooth as everybody would like. <br></p><p    >It also means that a lot of these extra students wouldn’t have chosen Deep Learning if they weren’t forced to.If this is you, you may find the course more difficult than other students: you may not be confident you have the right preliminaries, and you may not be as motivated by the subjects as those students who would have chosen the course anyway had it been an elective. <br></p><p    >To help you out, we’ve added Q&amp;A sessions to the schedule on the first four Fridays. Here, one of the week’s lecturers (Shujian or Peter) will be available to go over the material again. It’s great if you have specific questions, but you can also just ask for something to be explained again, or perhaps for us to explain some preliminaries.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -216,7 +215,7 @@ slides: true
             <img src="lecture00.course-details.key-stage-0015.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The first assignment is standard fare for a deep learning course. So standard in fact, that ChatGPT (or even plain old Google) can do it for you in five minutes flat. We know this, and we can’t stop you. The important thing to realize is that <strong>assignment 2 and the ones that follow it </strong><em>aren’t</em><strong> standard</strong>. For most of them, GPT isn’t going to be able to do the hard work for you. And if you don’t put the work into assignment 1, you won’t understand assignment 2. <br></p><p    >So, in short, if you use ChatGPT for assignment 1, you will only be shooting yourself in the foot. Building a neural network from scratch, by yourself is a fundamental foundation that we are going to build on in the rest of the course. It’s also something that every Deep Learning practitiner has done at least once, so you shouldn’t deny yourself the experience. If you do, then the rest of the material simply won’t make sense and you will lack crucial experience that people will expect you to have, based on your diploma.<br></p><p    >Assignment 1 can be a tough exercise with lots of debugging and headscratching, so please start early, and give yourself time to struggle with it for while. It may be unpleasant, but it’s an important learning experience.</p><p    ></p>
+            <p    >The first assignment is standard fare for a deep learning course. So standard in fact, that ChatGPT (or even plain old Google) can do it for you in five minutes flat. We know this, and we can’t stop you. The important thing to realize is that <strong>assignment 2 and the ones that follow it </strong><em>aren’t</em><strong> standard</strong>. For most of them, GPT isn’t going to be able to do the hard work for you. And if you don’t put the work into assignment 1, you won’t understand assignment 2. <br></p><p    >So, in short, if you use ChatGPT for assignment 1, you will only be shooting yourself in the foot. Building a neural network from scratch, by yourself is a fundamental foundation that we are going to build on in the rest of the course. It’s also something that every Deep Learning practitioner has done at least once, so you shouldn’t deny yourself the experience. If you do, then the rest of the material simply won’t make sense and you will lack crucial experience that people will expect you to have, based on your diploma.<br></p><p    >Assignment 1 can be a tough exercise with lots of debugging and headscratching, so please start early, and give yourself time to struggle with it for while. It may be unpleasant, but it’s an important learning experience.</p><p    ></p>
             </figcaption>
        </section>
 
