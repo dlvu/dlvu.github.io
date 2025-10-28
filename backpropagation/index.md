@@ -72,12 +72,11 @@ slides: true
 
        <section class="video" id="video-004">
            <a class="slide-link" href="https://dlvu.github.io/backpropagation#video-4">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/idO5r5eWIrw?si=NnUUgtAroD3_Rich"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://surfdrive.surf.nl/index.php/s/zKscql3IWEIuBUj/download" type="video/mp4" />
+
+                Download the <a href="https://surfdrive.surf.nl/index.php/s/zKscql3IWEIuBUj/download">video</a>.
+           </video>
 
        </section>
 
@@ -414,7 +413,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0029_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0029_animation_0000.svg,lecture02.backpropagation.key-stage-0029_animation_0001.svg,lecture02.backpropagation.key-stage-0029_animation_0002.svg,lecture02.backpropagation.key-stage-0029_animation_0003.svg,lecture02.backpropagation.key-stage-0029_animation_0004.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Note that when we’re computing the derivative for <span>w</span><sub>12</sub>, we are also, along the way computing the derivatives for <span>y</span>, <span>h</span><sub>2</sub> and <span>k</span><sub>2</sub>.<br></p><p    >This useful when it comes to implementing backpropagation. We can walk backward down the computation graph and compute the derivative of the loss for every node. For the nodes below, we just multiply the local gradient. This means we can very efficiently compute any derivatives we need. <br></p><p    >In fact, this is <em>where the name backpropagation comes from</em>: the derivative of the loss propagates down the network in the opposite direction to the forward pass. We will show this more precisely in the last part of this lecture.</p><p    ></p>
+            <p    >Note that when we’re computing the derivative for <span>w</span><sub>12</sub>, we are also, along the way computing the derivatives for <span>y</span>, <span>h</span><sub>2</sub> and <span>k</span><sub>2</sub>.<br></p><p    >This useful when it comes to implementing backpropagation. We can walk backward down the computation graph and compute the derivative of the loss for every node. For the nodes below, we just multiply the local gradient. This means we can very efficiently compute any derivatives we need. <br></p><p    >In fact, this is <em>where the name backpropagation comes from</em>: the derivative of the loss propagates down the network in the opposite direction to the forward pass.<br></p><p    >To make this idea more precise we’ll need to draw our computation in a slightly different kind of diagram</p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -428,7 +427,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0030_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0030_animation_0000.svg,lecture02.backpropagation.key-stage-0030_animation_0001.svg,lecture02.backpropagation.key-stage-0030_animation_0002.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here is a more abstract view of what is happening in backpropagation, which should apply to any kind of computation. We can think of the computations we do as modules with <span>inputs</span> and <span>outputs</span>, chained together to make a computation <em>graph</em>. The <span>output </span>of each module contributes ultimately to the result of the computation, which is the <em>loss</em>.<br></p><p    >We want to know the derivative of the loss with respect to each of our <span>input</span> nodes. By the chain rule, this is the derivative of the los with respect to the <span>output </span>times the derivative of the <span>output</span> with respect to the <span>input</span>.<br></p><p    >If we take care to walk back down our computation graph in the correct order, then we can be sure that for every module we encounter, we will have already computed the first factor. We only need to compute the second, and mulitply by the value we already have.<br></p><aside    >We’ll extend this abstract view of backpropagation in the last part of the lecture. </aside><aside    ></aside>
+            <p    >Here is a more abstract view of what is happening in backpropagation, which should apply to any kind of computation. We can think of the computations we do as modules with <span>inputs</span> and <span>outputs</span>, chained together to make a computation <em>graph</em>. The <span>output </span>of each module contributes ultimately to the result of the computation, which is the <em>loss</em>.<br></p><p    >We want to know the derivative of the loss with respect to each of our <span>input</span> nodes. By the chain rule, this is the derivative of the los with respect to the <span>output </span>times the derivative of the <span>output</span> with respect to the <span>input</span>.<br></p><p    >If we take care to walk back down our computation graph in the correct order, then we can be sure that for every module we encounter, we will have already computed the first factor. We only need to compute the second, and multiply by the value we already have.<br></p><aside    >We’ll extend this abstract view of backpropagation in the last part of the lecture. See <a href="https://mlvu.github.io/beyondlinear/#slide-031"><span>https://mlvu.github.io/beyondlinear/#slide-031</span></a> for a more in-depth explanation of this principle in scalar graphs. </aside><aside    ></aside>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -482,7 +481,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0034_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0034_animation_0000.svg,lecture02.backpropagation.key-stage-0034_animation_0001.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Of course, we cannot change <span>y </span>directly. Instead, we have to change the values that influenced <span>y</span>.<br></p><p    >Here we see what that looks like for the <span>weights</span> of the second layer. First note that the output <span>y</span> in this example was <strong>too high</strong>. Since all the hidden nodes have positive values (because of the sigmoid), we end up subtracting some positive value from all the weights. This will lower the output, as expected. <br></p><p    >Second, note that the change is proportional to the input. The first hidden node <span>h</span><sub>1</sub> only contributes a factor of 0.1 (times its weight) to the value of y, so it isn't changed as much as <span>h</span><sub>3</sub>, which contributes much more to the erroneous value.<br></p><p    >Note also that the current value of the weight doesn’t factor into the update: whether <span>v</span><sub>1</sub> is 1, 10 or 100, we subtract the same amount. Only how much influence the weight had on the value of <span>y</span> in the forward pass if taken into account. The higher the activation of the <span>source node</span>, the more the weight gets adjusted.<br></p><p    >Finally, note how the sign of the the derivative wrt to y is taken into account. Here, the model output was too high, so the more a weight contributed to the output, the more it gets "punished" by being lowered. If the output had been too low, the opposite would be true, and we would be adding something to the value of each weight.<br></p><p    ></p>
+            <p    >Of course, we cannot change <span>y </span>directly. Instead, we have to change the values that influenced <span>y</span>.<br></p><p    >Here we see what that looks like for the <span>weights</span> of the second layer. First note that the output <span>y</span> in this example was <strong>too high</strong>. Since all the hidden nodes have positive values (because of the sigmoid), we end up subtracting some positive value from all the weights. This will lower the output, as expected. <br></p><p    >Second, note that the change is proportional to the inputs (the <span>hidden nodes</span>). The first hidden node <span>h</span><sub>1</sub> only contributes a factor of 0.1 (times its weight) to the value of <span>y</span>, so it isn't changed as much as <span>h</span><sub>3</sub>, which contributes much more to the erroneous value.<br></p><p    >Note also that the current value of the weight doesn’t factor into the update: whether <span>v</span><sub>1</sub> is 1, 10 or 100, we subtract the same amount. Only how much influence the weight had on the value of <span>y</span> in the forward pass is taken into account. The higher the activation of the <span>source node</span>, the more the weight gets adjusted.<br></p><p    >Finally, note how the sign of the the derivative wrt to y is taken into account. Here, the model output was too high, so the more a weight contributed to the output, the more it gets "punished" by being lowered. If the output had been too low, the opposite would be true, and we would be adding something to the value of each weight.<br></p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -496,7 +495,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0035.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The sigmoid activation we’ve used so far allows only positive values to emerge from the hidden layer. If we switch to an activation that also allows negative activations (like a linear activation or a <strong>tanh</strong> activation), we see that <strong>backpropagation very naturally takes the sign into account</strong>.<br></p><aside    >Note the negative activation on <span>h</span><sub>2</sub>.<br></aside><p    >In this case, we want to update in such a way that <span>y</span> decreases, but we note that the weight <span>v</span><sub>2</sub> is multiplied by a <em>negative</em> value. This means that (for this instance) <span>v</span><sub>2</sub> contributes<em> negatively</em> to the model output, and its value should be increased if we want to decrease the output.<br></p><aside    >Note that the sign of <span>v</span><sub>2</sub> itself doesn’t matter. Whether it’s positive or negative, its value should increase.</aside><aside    ></aside>
+            <p    >The sigmoid activation we’ve used so far allows only positive values to emerge from the hidden layer. If we switch to an activation that also allows negative activations (like a linear activation or a <strong>tanh</strong> activation), we see that <strong>backpropagation very naturally takes the sign into account</strong>.<br></p><aside    >Note the negative activation on <span>h</span><sub>2</sub>.<br></aside><p    >In this case, we want to update in such a way that <span>y</span> decreases, but we note that the weight <span>v</span><sub>2</sub> is multiplied by a <em>negative</em> value. This means that (for this instance) <span>v</span><sub>2</sub> contributes<em> negatively</em> to the model output, and its value should be <em>in</em>creased if we want to decrease the output.<br></p><aside    >Note that the sign of <span>v</span><sub>2</sub> itself doesn’t matter. Whether it’s positive or negative, its value should increase.</aside><aside    ></aside>
             </figcaption>
        </section>
 
@@ -548,7 +547,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0040.svg" class="slide-image" />
 
             <figcaption>
-            <p    >To finish up let's look at how you would implement this in code. Here is the forward pass: computing the model output and the loss, given the inputs and the target value.<br></p><p    >Assume that <span>k</span> and <span>y</span> are initialized with 0s or random values. We'll talk about initialization strategies in the 4th lecture.</p><p    ></p>
+            <p    >To finish up let's look at how you would implement this in code. Here is the forward pass: computing the model output and the loss, given the inputs and the target value.<br></p><p    >You can assume that the <span>w</span>’s and <span>b</span>’s are initially set to 0 or to random values. We'll talk about initialization strategies in the 4th lecture.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -561,7 +560,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0041.svg" class="slide-image" />
 
             <figcaption>
-            <p    >And here is the backward pass. We compute gradients for every node in the network, regardless of whether the node represents a parameter. When we do the gradient descent update, we'll use the gradients of the parameters, and ignore the rest.<br></p><p    >Note that we don’t implement the derivations from slide 44 directly. Instead, we work backwards down the neural network: computing the derivative of each node as we go, by taking the derivative of the loss over the outputs and multiplying it by the local derivative.</p><p    ></p>
+            <p    >And here is the backward pass. We compute gradients for every node in the network, regardless of whether the node represents a parameter. When we do the gradient descent update, we'll use the gradients of the parameters, and ignore the rest.<br></p><p    >Note that we don’t implement the derivations from slide 44 directly. Instead, we work backwards down the neural network: computing the derivative of each node as we go, by taking the derivative of the loss over the outputs and multiplying it by the local derivative.<br></p><p    >What this shows is that backpropagation, done like this is a kind of meta-algorithm. For each neural network that you draw, it tells you how to work out a backward pass, but the actual<em> code</em> for that backward pass is always a different algorithm depending on the shape of the network. <br></p><p    >In the last section we’ll see autograd. The algorithm that looks at the shape of a network, and applies backpropagation without us having to do anything.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -596,12 +595,11 @@ slides: true
 
        <section class="video" id="video-042">
            <a class="slide-link" href="https://dlvu.github.io/backpropagation#video-42">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/O-xs8IyP4bQ?si=YWT0e5PGkU37kOVf"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://surfdrive.surf.nl/index.php/s/LC9snEI4d8KraBi/download" type="video/mp4" />
+
+                Download the <a href="https://surfdrive.surf.nl/index.php/s/LC9snEI4d8KraBi/download">video</a>.
+           </video>
 
        </section>
 
@@ -720,7 +718,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0052.svg" class="slide-image" />
 
             <figcaption>
-            <p    >As we see, even if we could come up with this kind of chain rule, one of the local derivatives is now a vector over a matrix. The result could only be represented in a 3-tensor. There are two problems with this:<br></p><p     class="list-item">If the operation has n inputs and n outputs, we are computing n<sup>3</sup> derivatives, even though we were only ultimately interested in n<sup>2</sup> of them (the derivatives of <strong>W</strong>). In the scalar algorithm we only ever had two nested loops (an n<sup>2</sup> complexity), and we only ever stored one gradient for one node in the computation graph. Now we suddenly have n<sup>3</sup> complexity and n<sup>3</sup> memory use. We were supposed to be making things faster.<br></p><p     class="list-item">We can easily <em>represent</em> a 3-tensor, but there’s no obvious, default way to multiply  a 3-tensor with a matrix, or with a vector (in fact there are many different ways). The multiplication of the chain rule becomes very complicated this way.<br></p><p    >In short, we need a more careful approach.</p><p    ></p>
+            <p    >As we see, even if we could come up with this kind of chain rule, one of the local derivatives is now a vector over a matrix. The result could only be represented in a 3-tensor. There are two problems with this:<br></p><p     class="list-item">If the operation has n inputs and n outputs, we are computing n<sup>3</sup> derivatives, even though we were only ultimately interested in n<sup>2</sup> of them (the derivatives of <strong>W</strong>). In the scalar algorithm we only ever had two nested loops (an n<sup>2</sup> complexity), and we only ever stored one gradient for one node in the computation graph. Now we suddenly have n<sup>3</sup> complexity and n<sup>3</sup> memory use. We were supposed to be making things faster.<br></p><p     class="list-item">We can easily <em>represent</em> a 3-tensor, but there’s no obvious, default way to multiply  a 3-tensor with a matrix, or with a vector (in fact there are many different ways). The multiplication of the chain rule becomes very complicated this way.<br></p><p    >In short, we need a more careful approach.<br></p><p    >Happily, this will also mean we will never need vector calculus or matrix calculus. While our derivations will contain many vectors and matrices (and higher-order tensors), the derivatives we take <strong>will only ever be with respect to a single scalar</strong>.<br></p><aside    >That scalar might be an element in a vector or matrix, so it may <span>look</span> like we’re doing a special kind of calculus, but it will always just be a single number, so the plain old rules of partial derivatives still apply. If you don’t let yourself get spooked by the indices, you’ll always be able to work it out from the basic principles of plain derivative taking.</aside><aside    ></aside>
             </figcaption>
        </section>
 
@@ -733,7 +731,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0053_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0053_animation_0000.svg,lecture02.backpropagation.key-stage-0053_animation_0001.svg,lecture02.backpropagation.key-stage-0053_animation_0002.svg" class="slide-image" />
 
             <figcaption>
-            <p    >To work out how to do this we make these following simplifying assumptions.<br></p><p    ></p>
+            <p    >To work out how to do this we make these simplifying assumptions.<br></p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -812,10 +810,10 @@ slides: true
 
        <section id="slide-058" class="anim">
             <a class="slide-link" href="https://dlvu.github.io/backpropagation#slide-058" title="Link to this slide.">link here</a>
-            <img src="lecture02.backpropagation.key-stage-0059_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0059_animation_0000.svg,lecture02.backpropagation.key-stage-0059_animation_0001.svg,lecture02.backpropagation.key-stage-0059_animation_0002.svg,lecture02.backpropagation.key-stage-0059_animation_0003.svg,lecture02.backpropagation.key-stage-0059_animation_0004.svg,lecture02.backpropagation.key-stage-0059_animation_0005.svg,lecture02.backpropagation.key-stage-0059_animation_0006.svg,lecture02.backpropagation.key-stage-0059_animation_0007.svg,lecture02.backpropagation.key-stage-0059_animation_0008.svg,lecture02.backpropagation.key-stage-0059_animation_0009.svg" class="slide-image" />
+            <img src="lecture02.backpropagation.key-stage-0059_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0059_animation_0000.svg,lecture02.backpropagation.key-stage-0059_animation_0001.svg,lecture02.backpropagation.key-stage-0059_animation_0002.svg,lecture02.backpropagation.key-stage-0059_animation_0003.svg,lecture02.backpropagation.key-stage-0059_animation_0004.svg,lecture02.backpropagation.key-stage-0059_animation_0005.svg,lecture02.backpropagation.key-stage-0059_animation_0006.svg,lecture02.backpropagation.key-stage-0059_animation_0007.svg,lecture02.backpropagation.key-stage-0059_animation_0008.svg,lecture02.backpropagation.key-stage-0059_animation_0009.svg,lecture02.backpropagation.key-stage-0059_animation_0010.svg,lecture02.backpropagation.key-stage-0059_animation_0011.svg" class="slide-image" />
 
             <figcaption>
-            <p    >We start simple: what is the gradient for <strong>y</strong>? This is a vector, because <strong>y</strong> is a vector. Let’s first work out the derivative of the i-th element of <strong>y</strong>. This is purely a scalar derivative so we can simply use the rules we already know. We get 2(<span>y</span><sub>i</sub> - t<sub>i</sub>) for that particular derivative.<br></p><p    >Then, we just re-arrange all the derivatives for <span>y</span><sub>i</sub> into a vector, which gives us the complete gradient for y.<br></p><p    >The final step requires a little creativity: we need to figure out how to compute this vector using only basic linear algebra operations on the given vectors and matrices. In this case it’s not so complicated: we get the gradient for <strong>y</strong> by element-wise subtracting <strong>t</strong> from <strong>y</strong> and multiplying by 2.<br></p><p    >We haven’t needed any chain rule yet, because our computation graph for this part has only one edge.<br></p><p    ><br></p><p    ></p>
+            <p    >We start simple: what is the gradient for <strong>y</strong>? This is a vector, because <strong>y</strong> is a vector. Let’s first work out the derivative of the i-th element of <strong>y</strong>. This is purely a scalar derivative so we can simply use the rules we already know. We get 2(<span>y</span><sub>i</sub> - t<sub>i</sub>) for that particular derivative.<br></p><aside    >We can’t directly apply gradient descent to <strong>y</strong>, but we will see later, that it is useful to just work out all the gradients for all the variables in our graph from top to bottom. <br></aside><p    >Then, we just re-arrange all the derivatives for <span>y</span><sub>i</sub> into a vector, which gives us the complete gradient for y.<br></p><p    >The final step requires a little creativity: we need to figure out how to compute this vector using only basic linear algebra operations on the given vectors and matrices. In this case it’s not so complicated: we get the gradient for <strong>y</strong> by element-wise subtracting <strong>t</strong> from <strong>y</strong> and multiplying by 2.<br></p><p    >We haven’t needed any chain rule yet, because our computation graph for this part has only one edge.<br></p><p    ><br></p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -829,7 +827,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0060_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0060_animation_0000.svg,lecture02.backpropagation.key-stage-0060_animation_0001.svg,lecture02.backpropagation.key-stage-0060_animation_0002.svg,lecture02.backpropagation.key-stage-0060_animation_0003.svg,lecture02.backpropagation.key-stage-0060_animation_0004.svg,lecture02.backpropagation.key-stage-0060_animation_0005.svg,lecture02.backpropagation.key-stage-0060_animation_0006.svg,lecture02.backpropagation.key-stage-0060_animation_0007.svg,lecture02.backpropagation.key-stage-0060_animation_0008.svg,lecture02.backpropagation.key-stage-0060_animation_0009.svg,lecture02.backpropagation.key-stage-0060_animation_0010.svg,lecture02.backpropagation.key-stage-0060_animation_0011.svg,lecture02.backpropagation.key-stage-0060_animation_0012.svg,lecture02.backpropagation.key-stage-0060_animation_0013.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Let’s move one step down and work out the gradient for <strong>V</strong>. We start with the scalar derivative for an arbitrary element of <strong>V</strong>: <span>V</span><sub>ij</sub>.<br></p><p    >Now, we need a chain rule, to backpropagate through <strong>y</strong>. However, since we are sticking to scalar derivatives, we can simply use the <strong>scalar multivariate chain rule</strong>. This tells us that however many intermediate values we have, we can work out the derivative for each, keeping the others constant, and sum the results.<br></p><p    >This gives us the sum in the second equality. We've worked out the gradient <strong>y</strong><sup>∇</sup> already, so we can fill that in and focus on the derivative of <span>y</span><sub>k</sub> over <span>V</span><sub>ij</sub>. the value of yk is defined in terms of linear algebra operations like matrix multiplication, but with a little thinking we can always rewrite these as a simple scalar sums. <br></p><p    >In the end we find that the derivative of <span>y</span><sub>k</sub> over <span>V</span><sub>ij </sub>reduces to the value of <span>h</span><sub>j</sub>. <br></p><p    >This tells us the values of every elemen (i, j) of <strong>V</strong><sup>∇</sup>. All that's left is to figure out how to compute this in a vectorized way. In this case, we can compute <strong>V</strong><sup>∇ </sup>as the outer product of the gradient for <strong>y</strong>, which we've computed already, and the vector <strong>h</strong>, which we can save during the forward pass.</p><p    ></p>
+            <p    >We now move one step down and work out the gradient for <strong>V</strong>. We start with the scalar derivative for an arbitrary element of <strong>V</strong>: <span>V</span><sub>ij</sub>.<br></p><p    >Now, we need a chain rule, to backpropagate through <strong>y</strong>. However, since we are sticking to scalar derivatives, we can simply use the <strong>scalar multivariate chain rule</strong>. This tells us that however many intermediate values we have, we can work out the derivative for each, keeping the others constant, and sum the results.<br></p><p    >This gives us the sum in the second equality. We've worked out the gradient <strong>y</strong><sup>∇</sup> already, so we can fill that in and focus on the derivative of <span>y</span><sub>k</sub> over <span>V</span><sub>ij</sub>. the value of yk is defined in terms of linear algebra operations like matrix multiplication, but with a little thinking we can always rewrite these as a simple scalar sums. <br></p><p    >In the end we find that the derivative of <span>y</span><sub>k</sub> over <span>V</span><sub>ij </sub>reduces to the value of <span>h</span><sub>j</sub>. <br></p><p    >This tells us the values of every elemen (i, j) of <strong>V</strong><sup>∇</sup>. All that's left is to figure out how to compute this in a vectorized way. In this case, we can compute <strong>V</strong><sup>∇ </sup>as the outer product of the gradient for <strong>y</strong>, which we've computed already, and the vector <strong>h</strong>, which we can save during the forward pass.</p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -898,7 +896,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0065.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here’s the backward pass that we just derived.<br></p><p    >We’ve left the derivatives of the<span> </span><span>bias parameters</span> out. You’ll have to work these out to implement the first homework exercise.</p><p    ></p>
+            <p    >Here’s the backward pass that we just derived in pseudocode. Note that in each step we reuse a derivative that we computed in a previous step.<br></p><p    >We’ve left the derivatives of the<span> </span><span>bias parameters</span> out. You’ll have to work these out to implement the first homework exercise.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -933,12 +931,11 @@ slides: true
 
        <section class="video" id="video-066">
            <a class="slide-link" href="https://dlvu.github.io/backpropagation#video-66">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/9H-o8wESCxI?si=NyQ6djR2xavcBsIL"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://surfdrive.surf.nl/index.php/s/vwxLQ83mmhZ6rUQ/download" type="video/mp4" />
+
+                Download the <a href="https://surfdrive.surf.nl/index.php/s/vwxLQ83mmhZ6rUQ/download">video</a>.
+           </video>
 
        </section>
 
@@ -962,7 +959,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0069.svg" class="slide-image" />
 
             <figcaption>
-            <p    ></p>
+            <p    >This is what we’ve done so far. We draw our network on pen and paper, we work out all the derivatives, vectorize them, and then we write down what we’ve worked out with pen and paper. </p><p    ></p>
             </figcaption>
        </section>
 
@@ -975,7 +972,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0070.svg" class="slide-image" />
 
             <figcaption>
-            <p    >This is what we want to achieve. We work out on pen and paper the local derivatives of various <em>modules</em>, and then we chain these modules together in a computation graph <em>in our code</em>. The computer keeps the graph in memory, and can automatically work out the backpropagation.</p><p    ></p>
+            <p    >This is what we want to achieve. We work out on pen and paper the <em>local </em>derivatives of various <em>modules</em>, and then we chain these modules together in a computation graph <em>in our code</em>. The computer keeps the graph in memory, and can automatically work out the backpropagation.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -988,7 +985,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0071_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0071_animation_0000.svg,lecture02.backpropagation.key-stage-0071_animation_0001.svg,lecture02.backpropagation.key-stage-0071_animation_0002.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Whenever we work out a gradient, as we did in the previous video, we always look at the node above the one for which we're computing the gradient, and use the multivariate chain rule to split the gradient in two. In this case, we are working out the gradient for <strong>W</strong> and we apply the multivariate chain to break that gradient into the gradient for k and the derivatives of <strong>k</strong> with respect to <strong>W</strong>.<br></p><p    >The key idea, that powers automatic differentiation is that <strong>once we have k</strong><sup>∇</sup><strong>, we no longer care about anything else that happens above k in our computation graph</strong>. All we need is <strong>k</strong><sup>∇</sup> and we can work out <strong>W</strong> nabla.</p><p    ></p>
+            <p    >Here is the key idea that will make this possible. <br></p><p    >Whenever we work out a gradient, as we did in the previous video, we always look at the node above the one for which we're computing the gradient, and use the multivariate chain rule to split the gradient in two. In this case, we are working out the gradient for <strong>W</strong> and we apply the multivariate chain to break that gradient into the gradient for k and the derivatives of <strong>k</strong> with respect to <strong>W</strong>.<br></p><p    >The key idea, that powers automatic differentiation is that <strong>once we have k</strong><sup>∇</sup><strong>, we no longer care about anything else that happens </strong><em>above</em><strong> k in our computation graph</strong>. All we need is <strong>k</strong><sup>∇</sup> and we can work out <strong>W</strong><sup>∇</sup> nabla.</p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -1148,7 +1145,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0083.svg" class="slide-image" />
 
             <figcaption>
-            <p    >To store a computation graph in memory, we need three classes of objects. The first two are shown here.<br></p><p    >A <span>TensorNode</span> objects holds the tensor value at that node. It holds the gradient of the tensor at that node (to be filled by the backpropagation algorithm) and it holds a pointer to the Operation Node that produced it (which can be null for leaf nodes).<br></p><p    >An <span>OpNode</span> object represents an<em> instance</em> of a particular operation being applied in the computation. It stores the particular op being used (mulitplication, additions, etc) and the inputs and the outputs. In the MLP example, we perform several matrix mulitplications: each of these becomes a separate OpNode in the computation graph, all recording an instance of the matrix multiplication operation  being used. Each of them refers to a single object representing this operation.<br></p><p    >This is the third class: the Op.<br></p><p    ></p>
+            <p    >To store a computation graph in memory, we need three classes of objects. The first two are shown here.<br></p><p    >A <span>TensorNode</span> objects holds the tensor value at that node. It holds the gradient of the tensor at that node (to be filled by the backpropagation algorithm) and it holds a pointer to the Operation Node that produced it (which can be null for leaf nodes).<br></p><p    >An <span>OpNode</span> object represents an<em> instance</em> of a particular operation being applied in the computation. It stores the particular op being used (multiplication, additions, etc) and the inputs and the outputs. In the MLP example, we perform several matrix mulitplications: each of these becomes a separate OpNode in the computation graph, all recording an instance of the matrix multiplication operation  being used. Each of them refers to a single object representing this operation.<br></p><p    >This is the third class: the Op.<br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -1161,7 +1158,7 @@ slides: true
             <img src="lecture02.backpropagation.key-stage-0084_animation_0000.svg" data-images="lecture02.backpropagation.key-stage-0084_animation_0000.svg,lecture02.backpropagation.key-stage-0084_animation_0001.svg,lecture02.backpropagation.key-stage-0084_animation_0002.svg,lecture02.backpropagation.key-stage-0084_animation_0003.svg,lecture02.backpropagation.key-stage-0084_animation_0004.svg" class="slide-image" />
 
             <figcaption>
-            <p    >If the difference between an Op and an OpNode is unclear consider that a single neural network may apply, say, a sigmoid operation many times. The <span>Op</span> object for the sigmoid defines how to compute the sigmoid operations (and its gradient). Then for each place in the computation graph where the sigmoid is applied, we create a separate <span>OpNode</span> object which references the inputs and outputs specific to that application of the sigmoid, together with a single pointer to the single sigmoid <span>Op</span>. This is where we actually define how to perform the computation.<br></p><p    >An <span>Op</span> is defined by two functions. <br></p><p    >The function <span>forward</span> computes the outputs given the inputs (just like any function in any programming language).<br></p><p    >The function <span>backward</span> takes the gradient <em>for</em> the outputs (the gradient of the loss wrt to the outputs) and produces the gradient <em>for</em> the inputs.<br></p><p    >Both functions are also given a <span>context</span> object. This is a data structure (a dictionary or a list) to which the forward can add any value which it needs to save for the backward, we'll see an example of this later.<br></p><aside    >Note that the backward function does not compute the local derivative as we did in the scalar backpropagation: it computes the accumulated gradient of the loss over the inputs (given the accumulated gradient of the loss over the outputs).</aside><aside    ></aside>
+            <p    >If the difference between an Op and an OpNode is unclear consider that a single neural network may apply, say, a sigmoid operation many times. The <span>Op</span> object for the sigmoid defines how to compute the sigmoid operations (and its gradient). Then, for each place in the computation graph where the sigmoid is applied, we create a separate <span>OpNode</span> object which references the inputs and outputs specific to that application of the sigmoid, together with a single pointer to the single sigmoid <span>Op</span>. This is where we actually define how to perform the computation.<br></p><p    >An <span>Op</span> is defined by two functions: forward and backward. <br></p><p    >The function <span>forward</span> computes the outputs given the inputs (just like any function in any programming language).<br></p><p    >The function <span>backward</span> takes the gradient <em>for</em> the outputs (the gradient of the loss wrt to the outputs) and produces the gradient <em>for</em> the inputs.<br></p><p    >Both functions are also given a <span>context</span> object. This is a data structure (a dictionary or a list) to which the forward can add any value which it needs to save for the backward, we'll see an example of this later.<br></p><aside    >Note that the backward function does not compute the local derivative as we did in the scalar backpropagation: it computes the accumulated gradient of the loss over the inputs (given the accumulated gradient of the loss over the outputs).</aside><aside    ></aside>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
