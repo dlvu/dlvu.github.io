@@ -73,9 +73,9 @@ slides: true
        <section class="video" id="video-004">
            <a class="slide-link" href="https://dlvu.github.io/backpropagation#video-4">link here</a>
            <video controls>
-                <source src="https://surfdrive.surf.nl/index.php/s/zKscql3IWEIuBUj/download" type="video/mp4" />
+                <source src="https://pbm.thegood.cloud/s/9etMF968KyzFEbn/download/21%20scalar%20backpropagation.mp4" type="video/mp4" />
 
-                Download the <a href="https://surfdrive.surf.nl/index.php/s/zKscql3IWEIuBUj/download">video</a>.
+                Download the <a href="https://pbm.thegood.cloud/s/9etMF968KyzFEbn/download/21%20scalar%20backpropagation.mp4">video</a>.
            </video>
 
        </section>
@@ -596,9 +596,9 @@ slides: true
        <section class="video" id="video-042">
            <a class="slide-link" href="https://dlvu.github.io/backpropagation#video-42">link here</a>
            <video controls>
-                <source src="https://surfdrive.surf.nl/index.php/s/LC9snEI4d8KraBi/download" type="video/mp4" />
+                <source src="https://pbm.thegood.cloud/s/J9gfdbTn7Kx5bKk/download/22%20tensor%20backpropagation.mp4" type="video/mp4" />
 
-                Download the <a href="https://surfdrive.surf.nl/index.php/s/LC9snEI4d8KraBi/download">video</a>.
+                Download the <a href="https://pbm.thegood.cloud/s/J9gfdbTn7Kx5bKk/download/22%20tensor%20backpropagation.mp4">video</a>.
            </video>
 
        </section>
@@ -932,9 +932,9 @@ slides: true
        <section class="video" id="video-066">
            <a class="slide-link" href="https://dlvu.github.io/backpropagation#video-66">link here</a>
            <video controls>
-                <source src="https://surfdrive.surf.nl/index.php/s/vwxLQ83mmhZ6rUQ/download" type="video/mp4" />
+                <source src="https://pbm.thegood.cloud/s/bHXYesG5X8Rya7P/download/23%20autodiff.mp4" type="video/mp4" />
 
-                Download the <a href="https://surfdrive.surf.nl/index.php/s/vwxLQ83mmhZ6rUQ/download">video</a>.
+                Download the <a href="https://pbm.thegood.cloud/s/bHXYesG5X8Rya7P/download/23%20autodiff.mp4">video</a>.
            </video>
 
        </section>
