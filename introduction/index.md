@@ -18,12 +18,11 @@ slides: true
 
        <section class="video" id="video-000">
            <a class="slide-link" href="https://dlvu.github.io/introduction#video-0">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/MrZvXcwQJdg?si=BRr6mIPzcjbE1N_a"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/nJDM4XdFDmxLwSy/download/11%20neural%20networks.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/nJDM4XdFDmxLwSy/download/11%20neural%20networks.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -297,12 +296,11 @@ slides: true
 
        <section class="video" id="video-020">
            <a class="slide-link" href="https://dlvu.github.io/introduction#video-20">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/-JNj1legjHw?si=unWk3uoiBqGfVnmt"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/9CcXkqw23ACsMPb/download/12%20classification%20and%20regression.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/9CcXkqw23ACsMPb/download/12%20classification%20and%20regression.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -498,12 +496,11 @@ slides: true
 
        <section class="video" id="video-034">
            <a class="slide-link" href="https://dlvu.github.io/introduction#video-34">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/M1hh8HcWEzk?si=8OlYpUyuibS7PJI5"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/ZnZLLe7mfq2aW2B/download/13%20autoencoders.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/ZnZLLe7mfq2aW2B/download/13%20autoencoders.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -540,7 +537,7 @@ slides: true
             <img src="lecture01.introduction.key-stage-0037_animation_0000.svg" data-images="lecture01.introduction.key-stage-0037_animation_0000.svg,lecture01.introduction.key-stage-0037_animation_0001.svg,lecture01.introduction.key-stage-0037_animation_0002.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here’s the picture in detail. We call the bottom half of the network the <strong>encoder</strong> and the top half the <strong>decoder</strong>. We feed the autoencoder an instance from our dataset, and all it has to do is reproduce that instance in its output. We can use any loss that compares the output to the original input, and produces a lower loss, the more similar they are. Then, we just brackpropagate the loss and train by gradient descent.<br></p><aside    >To feed a neural network an image, we can just flatten the whole thing into a vector. Every color channel of every pixel becomes an input node, giving us, in this case 128 × 128 × 3 inputs. This is a bit costly, but we’ll see some more efficient ways to feed images to neural networks soon.<br></aside><p    >Many loss functions would work here, but to keep things simple, we’ll stick with the squared error loss.<br></p><p    >We call the  blue layer the<span class="blue"> </span><strong class="blue">latent representation</strong> of the input. If we train an autoencoder with just two nodes in the bottleneck layer, we can plot in two dimensions what latent representation each input is assigned. If the autoencoder works well, we expect to see similar images clustered together (for instance smiling people vs frowning people, men vs women, etc). This is often called the <strong>latent space</strong> of a network. <br></p><aside    >No need to read too much into that yet, but it’s phrase that will come back often.<br></aside><aside    >In a 2D space, we can’t cluster too many attributes together, but in higher dimensions it’s easier.  To quote <a href="http://jeffclune.com/courses/media/courses/2016-Fall-AI/lectures/L24-AI-2016.pdf"><strong class="blue">Geoff Hinton</strong></a>: “If there was a 30 dimensional supermarket, [the anchovies] could be close to the pizza toppings and close to the sardines.”</aside><aside    ></aside>
+            <p    >Here’s the picture in detail. We call the bottom half of the network the <strong>encoder</strong> and the top half the <strong>decoder</strong>. We feed the autoencoder an instance from our dataset, and all it has to do is reproduce that instance in its output. We can use any loss that compares the output to the original input, and produces a lower loss, the more similar they are. Then, we just brackpropagate the loss and train by gradient descent.<br></p><aside    >To feed a neural network an image, we can just flatten the whole thing into a vector. Every color channel of every pixel becomes an input node, giving us, in this case 128 × 128 × 3 inputs. This is a bit costly, but we’ll see some more efficient ways to feed images to neural networks soon.<br></aside><p    >Many loss functions would work here, but to keep things simple, we’ll stick with the squared error loss.<br></p><p    >We call the  blue layer the<span> </span><strong>latent representation</strong> of the input. If we train an autoencoder with just two nodes in the bottleneck layer, we can plot in two dimensions what latent representation each input is assigned. If the autoencoder works well, we expect to see similar images clustered together (for instance smiling people vs frowning people, men vs women, etc). This is often called the <strong>latent space</strong> of a network. <br></p><aside    >No need to read too much into that yet, but it’s phrase that will come back often.<br></aside><aside    >In a 2D space, we can’t cluster too many attributes together, but in higher dimensions it’s easier.  To quote <a href="http://jeffclune.com/courses/media/courses/2016-Fall-AI/lectures/L24-AI-2016.pdf"><strong>Geoff Hinton</strong></a>: “If there was a 30 dimensional supermarket, [the anchovies] could be close to the pizza toppings and close to the sardines.”</aside><aside    ></aside>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -554,7 +551,7 @@ slides: true
             <img src="lecture01.introduction.key-stage-0038.svg" class="slide-image" />
 
             <figcaption>
-            <p    >To show what this looks like, we've set up a relatively simple autoencoder. It uses a few tricks we haven’t discussed yet, but the basic principle is just neural network with a bottleneck and a squared error loss. The size of the bottleneck layer is 256 nodes.<br></p><p    >We train it on a low-resolution version of the <a href="https://github.com/NVlabs/ffhq-dataset"><strong class="blue">FFHQ dataset</strong></a>, containing 70 000 images of faces with resolution 128 × 128.<br></p><p    >Here are the reconstructions after 5 full passes over the data. </p><p    ></p>
+            <p    >To show what this looks like, we've set up a relatively simple autoencoder. It uses a few tricks we haven’t discussed yet, but the basic principle is just neural network with a bottleneck and a squared error loss. The size of the bottleneck layer is 256 nodes.<br></p><p    >We train it on a low-resolution version of the <a href="https://github.com/NVlabs/ffhq-dataset"><strong>FFHQ dataset</strong></a>, containing 70 000 images of faces with resolution 128 × 128.<br></p><p    >Here are the reconstructions after 5 full passes over the data. </p><p    ></p>
             </figcaption>
        </section>
 
@@ -660,7 +657,7 @@ slides: true
             <img src="lecture01.introduction.key-stage-0046_animation_0000.svg" data-images="lecture01.introduction.key-stage-0046_animation_0000.svg,lecture01.introduction.key-stage-0046_animation_0001.svg" class="slide-image" />
 
             <figcaption>
-            <p    >With a bit more powerful model, and some face detection, we can see what some famously moody celebrities might look like if they smiled.<br></p><p    >source: <a href="https://blogs.nvidia.com/blog/2016/12/23/ai-flips-kanye-wests-frown-upside-down/"><strong class="blue">https://blogs.nvidia.com/blog/2016/12/23/ai-flips-kanye-wests-frown-upside-down/</strong></a><br></p><p    ></p>
+            <p    >With a bit more powerful model, and some face detection, we can see what some famously moody celebrities might look like if they smiled.<br></p><p    >source: <a href="https://blogs.nvidia.com/blog/2016/12/23/ai-flips-kanye-wests-frown-upside-down/"><strong>https://blogs.nvidia.com/blog/2016/12/23/ai-flips-kanye-wests-frown-upside-down/</strong></a><br></p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
