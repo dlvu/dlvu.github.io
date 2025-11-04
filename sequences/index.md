@@ -46,12 +46,11 @@ slides: true
 
        <section class="video" id="video-002">
            <a class="slide-link" href="https://dlvu.github.io/sequences#video-2">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/rK20XfDN1N4?si=wtMoWrtgR4ETaKp5"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/JDBabKmcGgc8xL2/download/51%20Sequence%20models.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/JDBabKmcGgc8xL2/download/51%20Sequence%20models.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -381,7 +380,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0028.svg" class="slide-image" />
 
             <figcaption>
-            <p    >A sequence-to-sequence task is probably the simplest set-up. Our dataset consists of a set of input and output sequences. We simply create a model by stacking a bunch of sequence to sequence layers, and our loss is the difference between the <span>target sequence</span> and the <span>output sequence</span>.</p><p    ></p>
+            <p    >A sequence-to-sequence task is probably the simplest set-up. Our dataset consists of a set of input and output sequences. We simply create a model by stacking a bunch of sequence-to-sequence layers, and our loss is the difference between the <span>target sequence</span> and the <span>output sequence</span>.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -415,13 +414,14 @@ slides: true
 
 
 
-       <section id="slide-030">
+       <section id="slide-030" class="anim">
             <a class="slide-link" href="https://dlvu.github.io/sequences#slide-030" title="Link to this slide.">link here</a>
-            <img src="lecture05.sequences.key-stage-0031.svg" class="slide-image" />
+            <img src="lecture05.sequences.key-stage-0031_animation_0000.svg" data-images="lecture05.sequences.key-stage-0031_animation_0000.svg,lecture05.sequences.key-stage-0031_animation_0001.svg" class="slide-image" />
 
             <figcaption>
             <p    >If we have a<em> causal</em> model, and there is likely some processing required between the input and the output, it’s common to let the network read the whole input before it starts processing the output.<br></p><p    >With a non-causal model, we can just add extra layers to allow extra processing, but with a causal model, any processing that takes into account the last word of the input has to happen after that word, so we need to lengthen the sequence as well.<br></p><p    >Note that here, we’ve even given the model one empty step between the end of the question and the beginning of the answer, for extra processing (in practice this maybe hundreds of steps of padded tokens).</p><p    ></p>
             </figcaption>
+            <span class="hint">click image for animation</span>
        </section>
 
 
@@ -585,12 +585,11 @@ slides: true
 
        <section class="video" id="video-042">
            <a class="slide-link" href="https://dlvu.github.io/sequences#video-42">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/2JGlmBhQedk?si=khTatO6UOf9WCsAW"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/eazxp6FoyP3debe/download/52%20RNNs.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/eazxp6FoyP3debe/download/52%20RNNs.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -640,7 +639,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0048_animation_0000.svg" data-images="lecture05.sequences.key-stage-0048_animation_0000.svg,lecture05.sequences.key-stage-0048_animation_0001.svg" class="slide-image" />
 
             <figcaption>
-            <p    >A line with no weight matrix represents a copy of the input vector. When two lines flow into each other, we concatenate their vectors. <br></p><p    >Here, the added line copies h, concatenates it to x, and applies weight matrix W.<br></p><p    ></p>
+            <p    >A line with no weight matrix represents a copy of the input vector. When two lines flow into each other, we concatenate their vectors. <br></p><p    >Here, the added line copies <strong>h</strong>, concatenates it to <strong>x</strong>, after whichweight matrix <strong>W</strong> is applied.<br></p><p    >Note that <strong>W</strong> and <strong>b</strong> must now be bigger than in the previous slide, since the input is a vector with more elements.<br></p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -719,7 +718,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0054.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Now the whole network is just one big, complicated feedforward net. Note that we have a lot of shared weights, but we know how to deal with those.<br></p><p    >Here, we’ve only drawn the loss for one output vector, but in a sequence-to-sequence task, we’d get a loss for every vector in the output sequence, which we would then sum.<br></p><p    ></p>
+            <p    >Now the whole network is just one big, complicated feedforward net. Note that we have a lot of shared weights, for example all the <strong>W</strong>’s represent the same weight matrix, but we know how to deal with those. <br></p><aside    >Specifically, if you were to draw the actual computation graph, <strong>W</strong> would be one Tensor Node, with a link to all the points in time where it is applied. Backpropagation would then derive a gradient for every application, and sum up all these gradients. If you have an autodiff system, all of this happens automatically, and you only need to worry about the forward pass. <br></aside><p    >Here, we’ve only drawn the loss for one output vector, but in a sequence-to-sequence task, we’d get a loss for every vector in the output sequence, which we would then sum, so that there is an error signal propagating back in time from every output vector. <br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -732,7 +731,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0055.svg" class="slide-image" />
 
             <figcaption>
-            <p    >In truncated backpropagation through time, we limit how far back the backpropagation goes, to save memory. The output is still entirely dependent on the whole sequence, but the weights are only trained based on the last few steps. Note that the weights are still affected everywhere, because they are shared between timesteps.<br></p><p    >Before the truncation point, we do not need to maintain a computation graph, so up to the computation of <strong>h</strong><sub>3</sub>, we do not need to store any intermediate values.<br></p><p    ><br></p><p    ><br></p><p    ></p>
+            <p    >In <em>truncated</em> backpropagation through time (TBPTT), we limit how far back the backpropagation goes, to save memory. The output is still entirely dependent on the whole sequence, but the weights are only trained based on the last few steps. Note that the weights are still affected everywhere, because they are shared between timesteps.<br></p><p    >Before the truncation point, we do not need to maintain a computation graph, so up to the computation of <strong>h</strong><sub>3</sub>, we do not need to store any intermediate values.<br></p><p    ><br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -771,7 +770,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0059.svg" class="slide-image" />
 
             <figcaption>
-            <p    >When training sequence-to-label, it’s quite common to take the last hidden state as the label output of the network (possible passed through an MLP to reshape it).<br></p><p    >Thos is broadly equivalent to the global unit shown in the first video, so this does mean that the last part of the sequence likely has more influence on the outptu than the first part. Nevertheless, it is a common configuration.</p><p    ></p>
+            <p    >When training RNNs sequence-to-label, it’s quite common to take the last <em>hidden </em>state as the label output of the network (usually passed through an MLP to reshape it). <br></p><p    >You can also use the last output vector, of course, there shouldn't be much difference, but for some reason this approach is often taken. It may be useful in settings where you’re combining sequence-to-label with sequence-to-sequence.<br></p><aside    >This is broadly equivalent to the global unit shown in the first video, so this does mean that the last part of the sequence likely has more influence on the output than the first part. Nevertheless, it is a common configuration.</aside><aside    ></aside>
             </figcaption>
        </section>
 
@@ -832,12 +831,11 @@ slides: true
 
        <section class="video" id="video-060">
            <a class="slide-link" href="https://dlvu.github.io/sequences#video-60">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/fbTCvvICk8M?si=lzXc2KfpCuuC_Mtu"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/zn82JeqqbpSxdtk/download/53%20LSTMs.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/zn82JeqqbpSxdtk/download/53%20LSTMs.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -939,7 +937,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0071.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The first is the “conveyor belt”. It passes the previous cell state to the next cell. Along the way, the current input can be used to manipulate it. <br></p><p    ><br></p><p    >Note that the connection from the previous cell to the next has <em>no activations</em>. This means that along this path, gradients do not decay: everything is purely linear. It’s also very easy for an LSTM cell  to ignore the current information and just pass the information along the conveyor belt.</p><p    ></p>
+            <p    >The first is the “conveyor belt”. It passes the previous cell state to the next cell. Along the way, the current input can be used to manipulate it. <br></p><p    >Note that the connection from the previous cell to the next has <em>no activations</em>. This means that along this path, gradients do not decay: everything is purely linear. It’s also very easy for an LSTM cell  to ignore the current information and just pass the information along the conveyor belt.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -952,7 +950,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0072.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here is the first manipulation of the conveyor belt. This is called the <strong>forget gate</strong>.<br></p><p    >It looks at the current <span class="blue">input</span>, concatenated with the previous <span class="orange">output</span>, and applies an element-wise scaling to the current value in the conveyor belt. Outputting all 1s will keep the current value on the belt what it is, and outputting all values near 0, will decay the values (forgetting what we’ve seen so far, and allowing it to be replaces by our new values in the next step).</p><p    ></p>
+            <p    >Here is the first manipulation of the conveyor belt. This is called the <strong>forget gate</strong>.<br></p><p    >It looks at the current <span>input</span>, concatenated with the previous <span>output</span>, and applies an element-wise scaling to the current value in the conveyor belt. Outputting all 1s will keep the current value on the belt what it is, and outputting all values near 0, will decay the values (forgetting what we’ve seen so far, and allowing it to be replaces by our new values in the next step).</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1156,12 +1154,11 @@ slides: true
 
        <section class="video" id="video-084">
            <a class="slide-link" href="https://dlvu.github.io/sequences#video-84">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/rT77lBfAZm4?si=XzPOr-6eTgJmsUqh"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/9JLfqrGpkEdWfE5/download/54%20Sequential%20CNNs%20.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/9JLfqrGpkEdWfE5/download/54%20Sequential%20CNNs%20.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -1402,12 +1399,11 @@ slides: true
 
        <section class="video" id="video-102">
            <a class="slide-link" href="https://dlvu.github.io/sequences#video-102">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/csAlW9HmwAQ?si=1GDZdwZ34YydsEvJ"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/MKiCSXBNmiHyMKZ" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/MKiCSXBNmiHyMKZ">video</a>.
+           </video>
 
        </section>
 
@@ -1458,7 +1454,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0114.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here, we can see a very direct example of the principle noted at the start of the lecture: that multiplying by<br></p><p    >Because the input layer is just a matrix multiplication, and the input is just a one-hot vector, what we end up doing when we compute the embedding for word i, is just extracting the i-th column from <strong class="orange">W</strong>.<br></p><p    >In other words, we’re not really training a function that <em>computes</em> an embedding for each word, we are actually learning the embeddings directly: every element of every embedding vector is a separate parameter.<br></p><p    ><br></p><p    ><br></p><p    ><br></p><p    ><br></p><p    ></p>
+            <p    >Here, we can see a very direct example of the principle noted at the start of the lecture: that multiplying by<br></p><p    >Because the input layer is just a matrix multiplication, and the input is just a one-hot vector, what we end up doing when we compute the embedding for word i, is just extracting the i-th column from <strong>W</strong>.<br></p><p    >In other words, we’re not really training a function that <em>computes</em> an embedding for each word, we are actually learning the embeddings directly: every element of every embedding vector is a separate parameter.<br></p><p    ><br></p><p    ><br></p><p    ><br></p><p    ><br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -1643,7 +1639,7 @@ slides: true
             <img src="lecture05.sequences.key-stage-0128_animation_0000.svg" data-images="lecture05.sequences.key-stage-0128_animation_0000.svg,lecture05.sequences.key-stage-0128_animation_0001.svg,lecture05.sequences.key-stage-0128_animation_0002.svg,lecture05.sequences.key-stage-0128_animation_0003.svg,lecture05.sequences.key-stage-0128_animation_0004.svg" class="slide-image" />
 
             <figcaption>
-            <p    >This gives us the<strong> chain rule of probability</strong> (not to be confused with the chain rule of  calculus, which is entirely different), which is often used in modelling sequences.<br></p><p    >The chain rule allows us to break a joint distribution on many variables into a product of conditional distributions. In sequences, we often apply it so that each word becomes conditioned on the words before it.<br></p><p    >This tells us that if we build a model that can estimate the probability p(<span class="blue">x</span>|<span class="green">y</span>, <span class="red">z</span>) of a word <span class="blue">x</span> based on the words <span class="green">y</span>, <span class="red">z</span> that precede it, we can then <em>chain</em> this estimator to give us the joint probability of the whole sentence <span class="blue">x</span>, <span class="green">y</span>, <span class="red">z</span>.</p><p    ></p>
+            <p    >This gives us the<strong> chain rule of probability</strong> (not to be confused with the chain rule of  calculus, which is entirely different), which is often used in modelling sequences.<br></p><p    >The chain rule allows us to break a joint distribution on many variables into a product of conditional distributions. In sequences, we often apply it so that each word becomes conditioned on the words before it.<br></p><p    >This tells us that if we build a model that can estimate the probability p(<span>x</span>|<span>y</span>, <span>z</span>) of a word <span>x</span> based on the words <span>y</span>, <span>z</span> that precede it, we can then <em>chain</em> this estimator to give us the joint probability of the whole sentence <span>x</span>, <span>y</span>, <span>z</span>.</p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
