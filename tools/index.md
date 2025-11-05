@@ -58,12 +58,11 @@ slides: true
 
        <section class="video" id="video-003">
            <a class="slide-link" href="https://dlvu.github.io/tools#video-3">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/EE5jTGP7wrM?si=RdsrImFZKcKNDk4I"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/abgcPwCx6x7rAk7/download/41%20general%20practice.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/abgcPwCx6x7rAk7/download/41%20general%20practice.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -377,7 +376,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0029.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Your learning rate is <em>very dependent</em> on the batch size. You can tune both together, but generally, the bigger the batch size, the faster your training, so people tend to go for the largest batch size that will fit in memory and tune with that. There is some evidence that smaller batches often work better, but then you can train longer with a larger batch size, so the trade-off depends on the model.<br></p><p    >If you're running large experiments, it can be good to measure throughput instead. This is the amount of data (eg. the number of characters) that your models sees per second. Often, GPUs work a lot faster if their memory isn't entirely full, so the batch size that will give you optimal throughput is the one that fills you memory to something like 80%.<br></p><p    ></p>
+            <p    >Your learning rate is <em>very dependent</em> on the batch size. You can tune both together, but generally, the bigger the batch size, the faster your training, so people tend to go for the largest batch size that will fit in memory and tune with that. There is some evidence that smaller batches often work better, but then you can train longer with a larger batch size, so the trade-off depends on the model.<br></p><p    >If you're running large experiments, it can be good to measure throughput instead. This is the amount of data (eg. the number of characters) that your models sees per second. Often, GPUs work a lot faster if their memory isn't entirely full, so the batch size that will give you optimal throughput is the one that fills you memory to something like 80%.<br></p><aside    >For a more finegrained selection, you should keep the logarithmic spacing. A common pattern is 0.1, 0.03, 0.01, 0.003, 0.001 and so on. This is why you often see seemingly very specific learning rates like 0.003 or 0.0034. This is not a sign of very detailed tuning. They are actually very round numbers in a logarithmic space. </aside><aside    ></aside>
             </figcaption>
        </section>
 
@@ -390,7 +389,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0030_animation_0000.svg" data-images="lecture04.tools.key-stage-0030_animation_0000.svg,lecture04.tools.key-stage-0030_animation_0001.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The simplest way to find a reasonable learning rate is to take a small number of logarithmically spaced values, do a short training run with each, and plot their loss per batch (after each forward pass, you plot the loss for that batch). <br></p><p    >This is usually a noisy curve (especially if your batch size is small), so you’ll need to apply some smoothing to see what’s going on. <br></p><p    >In this case, 0.1 is clearly too high. The loss bounces around, but never drops below a certain line. 0.03 seems to give us a nice quick drop, but we see that in the long run 0.01 and 0.003 drop below the orange line. 0.001 is too low: it converges very slowly, and never seems to make it into the region that 0.01 is in.<br></p><p    >Note that the difference between the lower learning rates seems small, but these differences are not insignificant. Small improvements late in the process tend to correspond to much more meaningful learning than the big changes early on. It can be helpful to plot the vertical axis in a logarithmic scale to emphasize this.<br></p><p    >Some popular toosl for automatically tracking your loss this way are<br></p><p     class="list-item">Tensorboard (which originated with tensorflow, but now works with both tensorflow and pytorch). This is a tool that runs on your own machien<br></p><p     class="list-item">Weights and biases. This is a cloud-based tool. It uploads your losses to a server, and provides an online dashboard.</p><p     class="list-item"></p>
+            <p    >The simplest way to find a reasonable learning rate is to take a small number of logarithmically spaced values, do a short training run with each, and plot their loss per batch (after each forward pass, you plot the loss for that batch). <br></p><p    >This is usually a noisy curve (especially if your batch size is small), so you’ll need to apply some smoothing to see what’s going on. <br></p><p    >In this case, 0.1 is clearly too high. The loss bounces around, but never drops below a certain line. 0.03 seems to give us a nice quick drop, but we see that in the long run 0.01 and 0.003 drop below the orange line. 0.001 is too low: it converges very slowly, and never seems to make it into the region that 0.01 is in.<br></p><p    >Note that the difference between the lower learning rates seems small, but these differences are not insignificant. Small improvements late in the process tend to correspond to much more meaningful learning than the big changes early on. It can be helpful to plot the vertical axis in a logarithmic scale to emphasize this.<br></p><p    >Some popular tools for automatically tracking your loss this way are<br></p><p     class="list-item">Tensorboard (which originated with tensorflow, but now works with both tensorflow and pytorch). This is a tool that runs on your own machine.<br></p><p     class="list-item">Weights and biases. This is a cloud-based tool. It uploads your losses to a server, and provides an online dashboard.</p><p     class="list-item"></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -404,7 +403,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0031.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Another helpful thing to plot is the <strong>gradient norm</strong> (basically an indicator of the size of step you’re taking). Just arrange all your parameters into a vector and compute its length.<br></p><p    >If the variance of your gradients goes to zero, you're probably getting stuck in a local minimum. If the variance is very large, your model is probably bouncing over areas of low loss. The middle curve shows a happy medium: high enough to move around, but not so high that it will miss important minima in the loss surface.<br></p><aside    >I the loss becomes NaN at any point, you will often see the gradient norm growing out of bounds just before. In that case gradient clipping, explained later, is a good way to solve the problem.</aside><aside    ></aside>
+            <p    >Another helpful thing to plot is the <strong>gradient norm</strong> (basically an indicator of the size of step you’re taking). Just arrange all your parameters into a vector and compute its length. This gives you, among other things, an indication of the variance of your gradients: how much is it changing in magnitude from one batch to the next.<br></p><p    >If the variance of your gradients goes to zero, you're probably getting stuck in a local minimum. If the variance is very large, your model is probably bouncing over areas of low loss. The middle curve shows a happy medium: high enough to move around, but not so high that it will miss important minima in the loss surface.<br></p><aside    >I the loss becomes NaN at any point, you will often see the gradient norm growing out of bounds just before. In that case gradient clipping, explained later, is a good way to solve the problem (as well as lowering the learning rate).</aside><aside    ></aside>
             </figcaption>
        </section>
 
@@ -456,7 +455,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0035.svg" class="slide-image" />
 
             <figcaption>
-            <p    >With a decent learning rate chosen, we can train for longer runs. At this point, a different kind of loss curve becomes important. For a smaller number of times during your training run (usually once per epoch), you should test your model on the whole <span>validation set</span> and on the whole <span>training set</span>.* You can then plot the average loss or accuracy (or any other metric) for both datasets.<br></p><p    >What we see here is that if we look at just the training accuracy, we might be confident of getting almost 99% of our instances correct. Unfortunately, the validation accuracy is much lower at around 96%. Some parts of our performance are due to <em>overfitting</em>, and will not<strong> generalize</strong> to unseen data. For this reason the difference between the performance on the training and validation data is called the <strong>generalization gap</strong>.<br></p><p    >* People often use the running loss averaged over the preceding epoch in place of this, but it's more accurate to rerun the model on the whole training data. This is because the running loss is an average taken as the model changes. If you want to know the training loss for the precise model at the end of the epoch, you need to do a full pass over the training data as well as over the validation data.</p><p    ></p>
+            <p    >With a decent learning rate chosen, we can train for longer runs. At this point, a different kind of loss curve becomes important. For a smaller number of times during your training run (usually once per epoch), you should test your model on the whole <span>validation set</span> and on the whole <span>training set</span>.* You can then plot the average loss or accuracy (or any other metric) for both datasets.<br></p><p    >What we see here is that if we look at just the training accuracy, we might be confident of getting almost 99% of our instances correct. Unfortunately, the validation accuracy is much lower at around 96%. Some parts of our performance are due to <em>overfitting</em>, and will not<strong> generalize</strong> to unseen data. For this reason the difference between the performance on the training and validation data is called the <strong>generalization gap</strong>.<br></p><p    >* People often use the running loss averaged over the preceding epoch in place of this, but it's more accurate (and more expensive) to rerun the model on the whole training data. This is because the running loss is an average taken as the model changes. If you want to know the training loss for the precise model at the end of the epoch, you need to do a full pass over the training data as well as over the validation data.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -608,12 +607,11 @@ slides: true
 
        <section class="video" id="video-044">
            <a class="slide-link" href="https://dlvu.github.io/tools#video-44">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/ixI83iX7TV4?si=UBGkKtXkeHMioFPi"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/adwfbsHQ8ZQLmDf/download/42%20why.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/adwfbsHQ8ZQLmDf/download/42%20why.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -637,7 +635,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0048.svg" class="slide-image" />
 
             <figcaption>
-            <p    >These are the sizes of some versions of GPT-3: a large language model trained by OpenAI. The largest has 175 billion parameters. <br></p><p    >This model was trained by nothing more than gradient descent and backpropagation. It’s worth pausing to think about that. Imagine if everybody on earth had 20 opinions that you could each individually sway one way or the other, and you wanted to sway each and every one of them in order to make one UN resolution pass. Succesfully applying gradient descent on a model of this size is like trying to reason backwards from the outcome of the UN vote through the organizational structure of the UN, the governments of the members states, the determination of their makeup by elections down to every individual on earth and how their opinions go into influencing their government.<br></p><p    >We don’t quite have the full picture for how it is possible that such a simple algorithm as gradient descent achieves this, but we are beginning to gather up some of the ingredients.<br></p><p    ><em>Language Models are Few-Shot Learners</em>, Brown et al, 2020.<br><a href="https://arxiv.org/abs/2005.14165"><strong>https://arxiv.org/abs/2005.14165</strong></a><br></p><p    ></p>
+            <p    >These are the sizes of some versions of GPT-3: a large language model trained by OpenAI. The largest has 175 billion parameters. <br></p><p    >This model was trained by nothing more than gradient descent and backpropagation. It’s worth pausing to think about that. Imagine if everybody on earth had 20 opinions that you could each individually sway one way or the other, and you wanted to sway each and every one of them in order to make one UN resolution pass. Successfully applying gradient descent on a model of this size is like trying to reason backwards from the outcome of the UN vote through the organizational structure of the UN, the governments of the members states, the determination of their makeup by elections down to every individual person on earth and how their opinions go into influencing their government.<br></p><p    >We don’t quite have the full picture for how it is possible that such a simple algorithm as gradient descent achieves this, but we are beginning to gather up some of the ingredients.<br></p><p    ><em>Language Models are Few-Shot Learners</em>, Brown et al, 2020.<br><a href="https://arxiv.org/abs/2005.14165"><strong>https://arxiv.org/abs/2005.14165</strong></a><br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -676,7 +674,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0051.svg" class="slide-image" />
 
             <figcaption>
-            <p    >So, next time you see a formula like this, to explain the basic optimization task of ML, you should know that this is a slightly poor definition of our problem. We want to solve this optimization problem, and we use techniques from optimization to do so. But in a way, we don’t want to solve it <em>too </em>well. <br></p><p    >In the classical machine learning view, we would keep to this optimization objective, and solve it perfectly, but we would then <em>cripple </em>the model class so that the overfitting models were no longer in the model space. In deep learning we expand the model class far beyond the overfitting models. At this point, the only optimization algorithms we have available will only be able to reach a certain part of this space. If we’re lucky, these parts contain the generalizing local optima and the overfitting global optima are pushed out of the range of the optimization algorithm.<br></p><p    >In short, modern machine learning is often the strange business of letting an optimization algorithm loose on a problem like this, but then crippling it, implicitly or explicitly, so that it doesn’t find the very best solution, because that wouldn’t lead to generalization.<br></p><p    ></p>
+            <p    >So, next time you see a formula like this, to explain the basic optimization task of ML, you should know that this is a slightly poor definition of our problem. We want to solve this optimization problem, and we use techniques from optimization to do so. But in a way, we don’t want to solve it <em>too </em>well. <br></p><p    >In the classical machine learning view, we would keep to this optimization objective, and solve it perfectly, but we would then <em>cripple </em>the model class so that the overfitting models were no longer in the model space. In deep learning we expand the model class far beyond the overfitting models. At this point, the only optimization algorithms we have available will only be able to reach a certain part of this space. If we’re lucky, these parts contain the generalizing local optima and the overfitting global optima are pushed out of the range of the optimization algorithm.<br></p><p    >In short, modern machine learning is often the strange business of letting an optimization algorithm loose on a problem like this, but then crippling it, implicitly or explicitly, so that it doesn’t find the very best solution, because that wouldn’t lead to generalization.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -703,7 +701,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0053.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here is what such curves actually look like for deep convolutional networks. Note on the left that the training loss goes to zero as the model capacity grows, due to overfitting. The test error first goes up as we approach the interpolation threshold, showing that the model is just overfitting, but then goes down again as we go far enough past the interpolation threshold.<br></p><p    >On the right, we see the effect of training time. If we don't let gradient descent search too far into the model space, we are essentially crippling its ability to overfit to highly specific solutions. Only when we let it search far enough to overfit, do we see a double descent emerge. In between, there is a sweet spot where the test error decays monotonically with model capacity , but still reaches the same performance that a longer search does.<br></p><p    ><a href="https://openai.com/blog/deep-double-descent/"><strong>https://openai.com/blog/deep-double-descent/</strong></a><br></p><p    ><br></p><p    ></p>
+            <p    >Here is what such curves actually look like for deep convolutional networks. Note on the left that the training loss goes to zero as the model capacity grows, due to overfitting. The test error first goes up as we approach the interpolation threshold, showing that the model is just overfitting, but then goes down again as we go far enough past the interpolation threshold.<br></p><p    >On the right, we see the effect of<strong> training time</strong>. If we don't let gradient descent search too far into the model space, we are essentially crippling its ability to overfit to highly specific solutions. Only when we let it search far enough to overfit, do we see a double descent emerge. In between, there is a sweet spot where the test error decays monotonically with model capacity , but still reaches the same performance that a longer search does.<br></p><p    ><a href="https://openai.com/blog/deep-double-descent/"><strong>https://openai.com/blog/deep-double-descent/</strong></a><br></p><p    ><br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -755,7 +753,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0057_animation_0000.svg" data-images="lecture04.tools.key-stage-0057_animation_0000.svg,lecture04.tools.key-stage-0057_animation_0001.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here's another mechanism that may play a role. Imagine gradient descent taking a single step of a fixed length. How many different models can it reach? If we look at only the steps along one of the axes (changing only one parameter, and leaving the rest), we can count the available models. It's 2 for a single parameter, 4 for two parameters and 8 for 3 parameters. In short, and exponential increase. <br></p><p    >In reality, one fixed step of gradient descent can reach every model on a sphere around the current position, so the amount and variety of models is a little harder to analyze, but the message remains the same: the amount increases exponentially with the number of dimensions. Once we get to billions of parameters, the variety of nearby models might be so great, that gradient descent only needs to walk a short path to a very good model.<br></p><p    >To paraphrase Geoffrey Hinton: “In a sixteen dimensional supermarket, the pizzas can be next to the anchovies, the beer, the cheese and the pasta”.<br></p><aside    >There’s not much rigorous work on this, but here’s a blog post that goes a little deeper: https://moultano.wordpress.com/2020/10/18/why-deep-learning-works-even-though-it-shouldnt/<br></aside><p    >What does this look like inside the network? What kind of parameters does gradient descent select? The <strong>lottery ticket hypothesis</strong> offers us a perspective on this.</p><p    ></p>
+            <p    >Here's another mechanism that may play a role. Imagine gradient descent taking a single step of a fixed length. How many truly different models can it reach? All points a fixed step size away from our starting position form a circle in 2D, a sphere in 3D and a hypersphere in n dimensions. <br></p><p    >The argument we want to make here is that as the number of dimensions increases, the number of different models that we can do increases<strong> exponentially</strong>. Obviously the circle, the sphere and so on contain infinitely many points. <br></p><p    >We want to make it intuitive that the higher dimensional spaces contain “more points” in some sense and, more importantly, more different points. One simple way to make this intuitive is to inscribe in the circle a square. The lines from the center to the corner of this square have length 1 so the sides have length √2.<br></p><p    >Now, what happens when we move to the sphere? We can inscribe a cube, so we get 8 corners. If we draw a triangle from the center to two corners that share an edge, we can see that the sides are again √2. That means, that in three dimensions, we have twice as many points, that are still at least  √2 away from each other.<br></p><p    >In higher dimensions, we can work out how many corners a hypercube has by drawing one along the axes, with one corner on the origin. Then, each corner will hit a point with coordinates 0 or 1 and indeed every vector consisting of 0s and 1s will be a corner. There are 2<sup>N</sup> such corners, so as the number of dimensions increases, we get an exponential explosion in points that are at least √2 away. <br></p><aside    >This is not quite a proof, but I hope it gives some geometric intuition how we get “exponentially more points within one step” in higher dimensions.<br></aside><p    >In reality, one fixed step of gradient descent can reach every model on a sphere around the current position, so the amount and variety of models is a little harder to analyze, but the message remains the same: the amount increases exponentially with the number of dimensions. Once we get to billions of parameters, the variety of nearby models might be so great, that gradient descent only needs to walk a short path to a very good model.<br></p><p    >To paraphrase Geoffrey Hinton: “In a sixteen dimensional supermarket, the pizzas can be next to the anchovies, the beer, the cheese and the pasta”.<br></p><aside    >There’s not much rigorous work on this, but here’s a blog post that goes a little deeper: https://moultano.wordpress.com/2020/10/18/why-deep-learning-works-even-though-it-shouldnt/<br></aside><p    >What does this look like inside the network? What kind of parameters does gradient descent select? The <strong>lottery ticket hypothesis</strong> offers us a perspective on this.</p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -909,12 +907,11 @@ slides: true
 
        <section class="video" id="video-066">
            <a class="slide-link" href="https://dlvu.github.io/tools#video-66">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/uEvvs2YCxQk?si=LoM19qg_p5GRctaJ"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/NPci88NM4gBZTSn/download/43%20optimizers.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/NPci88NM4gBZTSn/download/43%20optimizers.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -1387,12 +1384,11 @@ slides: true
 
        <section class="video" id="video-101">
            <a class="slide-link" href="https://dlvu.github.io/tools#video-101">link here</a>
-           <iframe
-                src="https://www.youtube.com/embed/mX92C0s0q1Y?si=2iZlRjcusuCLZQ8T"
-                title="YouTube video player"
-                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-           </iframe>
+           <video controls>
+                <source src="https://pbm.thegood.cloud/s/LrtTnbwGEecWcTy/download/44%20bag%20of%20tricks.mp4" type="video/mp4" />
+
+                Download the <a href="https://pbm.thegood.cloud/s/LrtTnbwGEecWcTy/download/44%20bag%20of%20tricks.mp4">video</a>.
+           </video>
 
        </section>
 
@@ -1429,19 +1425,6 @@ slides: true
             <img src="lecture04.tools.key-stage-0110.svg" class="slide-image" />
 
             <figcaption>
-            <p    ></p>
-            </figcaption>
-       </section>
-
-
-
-
-
-       <section id="slide-105">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-105" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0111.svg" class="slide-image" />
-
-            <figcaption>
             <p    >To understand this, imagine a network with just a single weight per layer (and no biases). First, consider what happens if you have linear activations, and set all weights higher than 1. As the network gets deeper, the output of each layer grows exponentially. If we get a gradient over the loss, the chain rule tells us to multiply it by the weights, so the gradient also grows exponentially. In theory, this is no problem: the gradients are correct so if we need smaller values, they should shrink quickly. It does mean, however, that unless we carefully tune our learning rate, we are taking very big steps at the start of learning. There is also the problem of numerical instability: the bigger our output, the less stable our nonlinear computations (like the loss) get.<br></p><p    >If we try to avoid it by setting the weights less than 1, we get the opposite problem: as the network gets deeper, the output shrinks exponentially and with it the gradients. Here, we have a situation, where learning never starts, because the initial gradient is far too small. And again, in this regime, there is a big probability of numerical instability.<br></p><p    >The sweet spot is a network with activations all equal to 1. That way, however big the input is, that's how big the output is, and the same goes for the gradient traveling back down the network.<br></p><p    >Of course, we never stack linear layers like this in practice. Let's see what happens when we add sigmoid activations. We see that for positive inputs the activations get squished into the interval (0, 1). Large activations are mapped to 0 and 1 and small activations are mapped to 0.5. In both cases, the sigmoid does something to counter the activation explosion/shrinkage problem. But we pay a large price in the backward pass.</p><p    ></p>
             </figcaption>
        </section>
@@ -1450,9 +1433,9 @@ slides: true
 
 
 
-       <section id="slide-106" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-106" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0112_animation_0000.svg" data-images="lecture04.tools.key-stage-0112_animation_0000.svg,lecture04.tools.key-stage-0112_animation_0001.svg" class="slide-image" />
+       <section id="slide-105" class="anim">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-105" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0111_animation_0000.svg" data-images="lecture04.tools.key-stage-0111_animation_0000.svg,lecture04.tools.key-stage-0111_animation_0001.svg" class="slide-image" />
 
             <figcaption>
             <p    >The very largest derivative the sigmoid will give us is 0.25. This means that as it propagates down the network, the gradient now shrinks exponentially in the number of sigmoids it encounters.<br></p><p    >We could fix this by squeezing the sigmoid, so its derivative is 1 in the middle, but that would increase the regions where the sigmoid is close to flat. If backpropagation encounters anything in these region, the gradient is multiplied by something very close to zero, so it dies immediately.</p><p    ></p>
@@ -1464,12 +1447,25 @@ slides: true
 
 
 
+       <section id="slide-106">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-106" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0112.svg" class="slide-image" />
+
+            <figcaption>
+            <p    >The ReLU activation preserves the derivatives for the nodes whose activations it lets through. It kills it for the nodes that produce a negative value, of course, but so long as your network is properly initialised, about half of the values in your batch will always produce a positive input for the ReLU.<br></p><p    >One way to think about the difference between the sigmoid and the ReLU is that the sigmoid preserves a gradient for every weight, but shrinks the magnitude exponentially. The ReLU exponentially shrinks the number of weights for which it preserves a gradient, but for those it preserves the<em> magnitude </em>perfectly. This is much preferable. In gradient descent, we take many steps, so it's fine to take a step for only an arbitrary subset of our weights each time. <br></p><p    >The only thing we must watch out for is that for each weight there is some input for which the weight gets a gradient. If any input to a ReLU is negative for all possible inputs to the network, its derivative will always be 0 and it will never change. This is what we call a <strong>dead neuron</strong>.<br></p><p    >We can avoid dead neurons by normalization: if all the inputs look standard-normally distributed, then half of them will always get a gradient.<br></p><p    ></p>
+            </figcaption>
+       </section>
+
+
+
+
+
        <section id="slide-107">
             <a class="slide-link" href="https://dlvu.github.io/tools#slide-107" title="Link to this slide.">link here</a>
             <img src="lecture04.tools.key-stage-0113.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The ReLU activation preserves the derivatives for the nodes whose activations it lets through. It kills it for the nodes that produce a negative value, of course, but so long as your network is properly initialised, about half of the values in your batch will always produce a positive input for the ReLU.<br></p><p    >One way to think about the difference between the sigmoid and the ReLU is that the sigmoid preserves a gradient for every weight, but shrinks the magnitude exponentially. The ReLU exponentially shrinks the number of weights for which it preserves a gradient, but for those it preserves the<em> magnitude </em>perfectly. This is much preferable. In gradient descent, we take many steps, so it's fine to take a step for only an arbitrary subset of our weights each time. <br></p><p    >The only thing we must watch out for is that for each weight there is some input for which the weight gets a gradient. If any input to a ReLU is negative for all possible inputs to the network, its derivative will always be 0 and it will never change. This is what we call a <strong>dead neuron</strong>.<br></p><p    >We can avoid dead neurons by normalization: if all the inputs look standard-normally distributed, then half of them will always get a gradient.<br></p><p    ></p>
+            <p    >In short, the precise behavior of your network at initialization depends a lot on your activations. But there is a basic principle that almost always works well: make sure that on average, your activations don't increase or decrease from the input to the output, and make sure that your gradients don't increase or decrease from the output loss to the input loss.<br></p><p    >A simple way to guarantee this is to ensure that if the input to your layer has standard mean and covariance, then the output does to, and ensure the same thing for the backward function (or as close as you can get). <br></p><p    >There are two simple approaches that are commonly used: Glorot and He initialization. These are also known as Xavier and Kaiming initialization respectively (in both cases after the authors' first name).</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1482,19 +1478,6 @@ slides: true
             <img src="lecture04.tools.key-stage-0114.svg" class="slide-image" />
 
             <figcaption>
-            <p    >In short, the precise behavior of your network at initialization depends a lot on your activations. But there is a basic principle that almost always works well: make sure that on average, your activations don't increase or decrease from the input to the output, and make sure that your gradients don't increase or decrease from the output loss to the input loss.<br></p><p    >A simple way to guarantee this is to ensure that if the input to your layer has standard mean and covariance, then the output does to, and ensure the same thing for the backward function (or as close as you can get). <br></p><p    >There are two simple approaches that are commonly used: Glorot and He initialization. These are also known as Xavier and Kaiming initialization respectively (in both cases after the authors' first name).</p><p    ></p>
-            </figcaption>
-       </section>
-
-
-
-
-
-       <section id="slide-109">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-109" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0115.svg" class="slide-image" />
-
-            <figcaption>
             <p    >Before we get to the weights, however, we must make sure that our assumption hold for the input to the first layer. We must normalize our data. For each scalar in our input (i.e. each color channel of each pixel, or each feature in a tabular dataset), we should make sure that over the whole data its mean is 0 and its variance is 1. The operation that achieves this is simple: compute the data mean, and subtract the data standard deviation.<br></p><aside    >NB: Remember what we said about leakage. How should you normalize the<span> test</span> and <span>validation</span> sets?</aside><aside    ></aside>
             </figcaption>
        </section>
@@ -1503,9 +1486,9 @@ slides: true
 
 
 
-       <section id="slide-110" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-110" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0116_animation_0000.svg" data-images="lecture04.tools.key-stage-0116_animation_0000.svg,lecture04.tools.key-stage-0116_animation_0001.svg,lecture04.tools.key-stage-0116_animation_0002.svg,lecture04.tools.key-stage-0116_animation_0003.svg,lecture04.tools.key-stage-0116_animation_0004.svg,lecture04.tools.key-stage-0116_animation_0005.svg,lecture04.tools.key-stage-0116_animation_0006.svg,lecture04.tools.key-stage-0116_animation_0007.svg" class="slide-image" />
+       <section id="slide-109" class="anim">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-109" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0115_animation_0000.svg" data-images="lecture04.tools.key-stage-0115_animation_0000.svg,lecture04.tools.key-stage-0115_animation_0001.svg,lecture04.tools.key-stage-0115_animation_0002.svg,lecture04.tools.key-stage-0115_animation_0003.svg,lecture04.tools.key-stage-0115_animation_0004.svg,lecture04.tools.key-stage-0115_animation_0005.svg,lecture04.tools.key-stage-0115_animation_0006.svg,lecture04.tools.key-stage-0115_animation_0007.svg" class="slide-image" />
 
             <figcaption>
             <p    >Glorot initialization makes the simplifying assumption that the layer is linearly activated. This won't be true in practice, but the initialization usually works anyway (especially with ReLU activations).<br></p><p    >Top left, we see the forward and the backward functions. We will assume first that the input has standard mean and variance. We will then sample the weights from some distribution with mean 0 and variance <span>c</span>, and try to ensure that the output y<sub>i</sub> has variance 1 for all i. What should <span>c</span> be?<br></p><p    >We fill in the definition of y<sub>i</sub>, and work the sum out of the variance. Variance doesn't distribute over multiplication, so if we rewrite to the product of the input and the weight, we get a few extra terms. Happily, these contain the expectations of the weights and the input as factors, which we'd assumed to be zero, so these disappear (more briefly; the variance does distribute over multiplication if the expectations of both arguments are zero, as they are here). What's left reduces to the sum of m times the variance of <span>c</span>, where m is the number of columns in the <span>weight matrix</span>.<br></p><p    >The same argument holds in the other direction for the backward pass. The variance of the loss for the input is n times <span>c</span>. For these to be 1, we need to set the variance of the elements of <strong>W</strong> to 1/n and 1/m. This is clearly impossible unless <strong>W</strong> is square. In practice, we choose either or m, or we take the we take the average of n and m. <br></p><p    >All that's left is to pick a distribution that has 0 mean and variance 2/(n + m). The most common options are a uniform distribution or a normal distribution. In the case of the normal distribution the parameter (the standard deviation) can be derived directly from the desired variance. In the case of the uniform distribution, the upper and lower bound shown here will give you the required variance.</p><p    ></p>
@@ -1517,9 +1500,9 @@ slides: true
 
 
 
-       <section id="slide-111">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-111" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0117.svg" class="slide-image" />
+       <section id="slide-110">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-110" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0116.svg" class="slide-image" />
 
             <figcaption>
             <p    >The simplifying assumption of the Glorot initialization was that the layer was linear. In short, we ignored the activation. In practice, it turns out that this doesn't hurt too much, and most networks train fine with Glorot initialization. However, it isn't too much effort to work out the impact of the activation. <br></p><p    >In the case of a ReLU, it's particularly straightforward: if the input to the activation has mean zero, then we expect half of them to be set to zero. This means that the remainder needs to have double the variance, or sqrt(2) times the standard deviation. This factor is called the <strong>gain</strong>. Each activation comes with its own gain. You can find a list here: <a href="https://pytorch.org/docs/stable/nn.init.html#"><strong>https://pytorch.org/docs/stable/nn.init.html#</strong></a> or in the paper.<br></p><p    >Note also that while the default choice for Glorot initialization is to average n and m (as shown here), the default choice for He initialization is to take only n. This choice shouldn't affect performance too much, but it may be important to implement it this way for compatibility or reproduction. When in doubt try to check the code of the model you're trying to reproduce.<br></p><p    ><br></p><p    ></p>
@@ -1530,9 +1513,9 @@ slides: true
 
 
 
-       <section id="slide-112" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-112" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0118_animation_0000.svg" data-images="lecture04.tools.key-stage-0118_animation_0000.svg,lecture04.tools.key-stage-0118_animation_0001.svg" class="slide-image" />
+       <section id="slide-111" class="anim">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-111" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0117_animation_0000.svg" data-images="lecture04.tools.key-stage-0117_animation_0000.svg,lecture04.tools.key-stage-0117_animation_0001.svg" class="slide-image" />
 
             <figcaption>
             <p    >In practice, it's very easy to initialize things without knowing exactly what you're doing. For instance, if you check the pytorch documentation for a linear layer, it turns out that it uses neither He nor Glorot, but a similar initialization with 1 in the numerator <br></p><aside    >Apparently based on this '99 paper by Yann Lecun: <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf"><strong>http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf</strong></a>.<br></aside><p    >These default initializations usually work fine, but it's worth trying different initializations if your model isn't performing as it should. Additionally, if you're reproducing a model that uses a specific stated initialization, make sure to initialize the layers manually.<br></p><p    >Another thing to consider is that the linear layer doesn't know which activation it feeds into. If you want to use He initialization, make sure to set the gain manually.<br></p><p    ></p>
@@ -1544,12 +1527,25 @@ slides: true
 
 
 
+       <section id="slide-112">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-112" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0118.svg" class="slide-image" />
+
+            <figcaption>
+            <p    >Even with sound initialization, however, in a very deep neural net, your gradients and activations will start to wander away from the standard mean and covariance. One good way to avoid this—both at initialization and as training takes hold—is to insert a layer that specifically normalizes its input, whatever the values.<br></p><p    >The most popular layer that does this is called a<strong> batch normalization</strong> layer. It takes a batch of tensors (vectors here, but any tensor shape works), and computes, for each dimension in the tensor, the mean and variance. It then normalizes the input by subtracting the mean and dividing by the standard deviation. All of these are simple, differentiable operations, so we can easily chain them together and let our AD system take care of the backpropagation.<br></p><p    >Optionally we can add two learnable parameters: an element-wise multiplication and a bias. This gives us the best of both worlds: the output of the batch norm can have any mean and variance, but we still get perfectly controlled gradients (this last step is linear, so the gradients are scaled linearly as well).<br></p><p    >Batch normalization works extremely well. In fact much better than any other approach that should work similarly (like controlling normalization through extra loss terms, or training the initial values to for normal activations). Many papers have been written about exactly why this is the case, but there doesn't seem to be a clear answer yet. For now, we can just remember that the basic idea is to stabilize the activations and the gradients.</p><p    ></p>
+            </figcaption>
+       </section>
+
+
+
+
+
        <section id="slide-113">
             <a class="slide-link" href="https://dlvu.github.io/tools#slide-113" title="Link to this slide.">link here</a>
             <img src="lecture04.tools.key-stage-0119.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Even with sound initialization, however, in a very deep neural net, your gradients and activations will start to wander away from the standard mean and covariance. One good way to avoid this—both at initialization and as training takes hold—is to insert a layer that specifically normalizes its input, whatever the values.<br></p><p    >The most popular layer that does this is called a<strong> batch normalization</strong> layer. It takes a batch of tensors (vectors here, but any tensor shape works), and computes, for each dimension in the tensor, the mean and variance. It then normalizes the input by subtracting the mean and dividing by the standard deviation. All of these are simple, differentiable operations, so we can easily chain them together and let our AD system take care of the backpropagation.<br></p><p    >Optionally we can add two learnable parameters: an element-wise multiplication and a bias. This gives us the best of both worlds: the output of the batch norm can have any mean and variance, but we still get perfectly controlled gradients (this last step is linear, so the gradients are scaled linearly as well).<br></p><p    >Batch normalization works extremely well. In fact much better than any other approach that should work similarly (like controlling normalization through extra loss terms, or training the initial values to for normal activations). Many papers have been written about exactly why this is the case, but there doesn't seem to be a clear answer yet. For now, we can just remember that the basic idea is to stabilize the activations and the gradients.</p><p    ></p>
+            <p    >Remember leakage? Batch norm is a typical example of a mechanism that can leak during evaluation. If we use batch norm the same way in evaluation as we do during training, we are aggregating information over the batch dimension. This is not usually a realistic way to use a neural net. In production, instances come in one at a time. Even if they don't in your setting and you can actually batch them together, you are likely comparing to a model that doesn't.<br></p><p    >Moreover, your evaluation performance is an average of several independent samples of the performance on a single instance. <br></p><p    >To eliminate this unfair advantage, batch norm behaves differently during evaluation than during training. Like the data normalization should do, it takes the mean and variance from the training data and normalizes by that. Since it's difficult in a library like pytorch to compute the training data mean/variance from inside a layer (in some cases, there may not be fixed dataset at all), batch norm usually computes a running mean  and variance using the exponential moving average to use during evaluation.<br></p><p    >This does mean that when you use batch norm your network needs to know whether its training or predicting. All DL libraries have a simple functionality for telling your network this, but if you forget to do so, you are inflating the performance of your network.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1562,7 +1558,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0120.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Remember leakage? Batch norm is a typical example of a mechanism that can leak during evaluation. If we use batch norm the same way in evaluation as we do during training, we are aggregating information over the batch dimension. This is not usually a realistic way to use a neural net. In production, instances come in one at a time. Even if they don't in your setting and you can actually batch them together, you are likely comparing to a model that doesn't.<br></p><p    >Moreover, your evaluation performance is an average of several independent samples of the performance on a single instance. <br></p><p    >To eliminate this unfair advantage, batch norm behaves differently during evaluation than during training. Like the data normalization should do, it takes the mean and variance from the training data and normalizes by that. Since it's difficult in a library like pytorch to compute the training data mean/variance from inside a layer (in some cases, there may not be fixed dataset at all), batch norm usually computes a running mean  and variance using the exponential moving average to use during evaluation.<br></p><p    >This does mean that when you use batch norm your network needs to know whether its training or predicting. All DL libraries have a simple functionality for telling your network this, but if you forget to do so, you are inflating the performance of your network.</p><p    ></p>
+            <p    >The batch dimension isn't the only dimension along which you can normalize. You can pick other directions and even subsets of the dimensions of your batch tensor. Depending on which dimension you pick this is called instance normalization, layer normalization or group normalization.<br></p><p    >Not normalizing over the batch dimension has several benefits. First, you don't have the leakage issue from the previous slide: group normalization can operate in exactly the same way during training and testing (only the batch dimension is "protected"). Second, the performance doesn't degrade for smaller batches. Batch norm requires a large number of instances to get strong estimates. If we don't have many instances in the input, but we do have, for instance, many pixels, then it may be better to normalize in another direction.<br></p><p    >In practice, however, for reasonable batch sizes, batch normalization appears to work best, and remains the most popular option for small models.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1575,7 +1571,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0121.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The batch dimension isn't the only dimension along which you can normalize. You can pick other directions and even subsets of the dimensions of your batch tensor. Depending on which dimension you pick this is called instance normalization, layer normalization or group normalization.<br></p><p    >Not normalizing over the batch dimension has several benefits. First, you don't have the leakage issue from the previous slide: group normalization can operate in exactly the same way during training and testing (only the batch dimension is "protected"). Second, the performance doesn't degrade for smaller batches. Batch norm requires a large number of instances to get strong estimates. If we don't have many instances in the input, but we do have, for instance, many pixels, then it may be better to normalize in another direction.<br></p><p    >In practice, however, for reasonable batch sizes, batch normalization appears to work best, and remains the most popular option for small models.</p><p    ></p>
+            <p    >Another cheap trick to help your gradients propagate during early training is to simply add a connection around a block of layers. We take the input of the block and add it to the output (sometimes multiplied by a single scalar parameter, but this isn't usually necessary). <br></p><p    >This does require that the input of the block has the same dimensions as the output, but it's usually possible to design your network in these kinds of blocks. This is called a <strong>residual connection</strong>.<br></p><p    >The benefit of the residual connection is that at the start of training, when the gradient signal through the block is weak because of the limits of initialization, there is a second signal through the residual that doesn't suffer this decay. The lower layers can start training based on this signal, and later, when the layers in the block start to do something useful, integrate the gradient from the block.<br></p><p    ><br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -1588,7 +1584,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0122.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Another cheap trick to help your gradients propagate during early training is to simply add a connection around a block of layers. We take the input of the block and add it to the output (sometimes multiplied by a single scalar parameter, but this isn't usually necessary). <br></p><p    >This does require that the input of the block has the same dimensions as the output, but it's usually possible to design your network in these kinds of blocks. This is called a <strong>residual connection</strong>.<br></p><p    >The benefit of the residual connection is that at the start of training, when the gradient signal through the block is weak because of the limits of initialization, there is a second signal through the residual that doesn't suffer this decay. The lower layers can start training based on this signal, and later, when the layers in the block start to do something useful, integrate the gradient from the block.<br></p><p    ><br></p><p    ></p>
+            <p    >Once we have our network up and running we need to control its behavior. If we are lucky, gradient descent moves towards a model that generalizes in the way we want it to generalize. If not, it will pick a different model, which generalizes in another way. It may, for instance end up overfitting on some aspects of the data. If the problem isn't too bad, we can control this with a little bit of <em>regularization</em>.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1601,7 +1597,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0123.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Once we have our network up and running we need to control its behavior. If we are lucky, gradient descent moves towards a model that generalizes in the way we want it to generalize. If not, it will pick a different model, which generalizes in another way. It may, for instance end up overfitting on some aspects of the data. If the problem isn't too bad, we can control this with a little bit of <em>regularization</em>.</p><p    ></p>
+            <p    >Regularization is telling the model in some way that we have an a priori preference for some models over other models. One common preference is <strong>simplicity</strong>. All else being equal, we prefer models that are somehow simple (fewer parameters, smaller parameter values, more zero parameters) to models that are more complex. <br></p><p    >Regularization is how we define this preference and how we communitcate it to our learning algorithm,<br></p><p    >A lot of the methods we use in deep learning have an <em>implicit</em> regularizing effect. For instance in gradient descent, we start at some point in model space, and take a finite number of small steps. This means we are much more likely to end up with a model that is close to our starting point. By our choice of initialization mehtod (which chooses the starting point) and our choice of gradient descent we have defined a preference from some models over others, even if we didn't do it consciously, and we couldn't quite state what that preference is.<br></p><p    >We'll now look at some more<strong> explicit</strong> regularizations. Methods which are explicitly added to GD or to our model to regularize it, and for which we can describe reasnoably well what preference we are encoding.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1614,7 +1610,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0124.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Regularization is telling the model in some way that we have an a priori preference for some models over other models. One common preference is <strong>simplicity</strong>. All else being equal, we prefer models that are somehow simple (fewer parameters, smaller parameter values, more zero parameters) to models that are more complex. <br></p><p    >Regularization is how we define this preference and how we communitcate it to our learning algorithm,<br></p><p    >A lot of the methods we use in deep learning have an <em>implicit</em> regularizing effect. For instance in gradient descent, we start at some point in model space, and take a finite number of small steps. This means we are much more likely to end up with a model that is close to our starting point. By our choice of initialization mehtod (which chooses the starting point) and our choice of gradient descent we have defined a preference from some models over others, even if we didn't do it consciously, and we couldn't quite state what that preference is.<br></p><p    >We'll now look at some more<strong> explicit</strong> regularizations. Methods which are explicitly added to GD or to our model to regularize it, and for which we can describe reasnoably well what preference we are encoding.</p><p    ></p>
+            <p    >The l2 regularizer considers models with small weight values to be preferable. It adds a  a penalty to the loss for models with larger weights.<br></p><p    >To implement the regularizer we simply compute the l2 norm of all the weights of the model (flattened into a vector). We then add this to the loss multiplied by hyperparameter lambda. Thus, models with bigger weights get a higher loss, but if it’s worth it (the original loss goes down enough), they can still beat the simpler models.<br></p><p    >In the image, the light brown parameter vector is preferable (according to l2 regularization) to the dark brown one.<br></p><p    >Here, theta is a vector containing all parameters of the model (it’s also possible to regularise only a subset).</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1627,7 +1623,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0125.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The l2 regularizer considers models with small weight values to be preferable. It adds a  a penalty to the loss for models with larger weights.<br></p><p    >To implement the regularizer we simply compute the l2 norm of all the weights of the model (flattened into a vector). We then add this to the loss multiplied by hyperparameter lambda. Thus, models with bigger weights get a higher loss, but if it’s worth it (the original loss goes down enough), they can still beat the simpler models.<br></p><p    >In the image, the light brown parameter vector is preferable (according to l2 regularization) to the dark brown one.<br></p><p    >Here, theta is a vector containing all parameters of the model (it’s also possible to regularise only a subset).</p><p    ></p>
+            <p    >Here's how the l2 norm is computed for a two parameter model (this should not be news to you).<br></p><p    >By replacing the square with an arbitrary exponent (and similarly adapting the root), we can modify the norm to a range of other so called <strong>l-norms</strong>. All of these are well defined norms following the rules that a norm should follow. By regularizing with l norms of different values of p, we can change the regularization behavior.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1640,7 +1636,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0126.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here's how the l2 norm is computed for a two parameter model (this should not be news to you).<br></p><p    >By replacing the square with an arbitrary exponent (and similarly adapting the root), we can modify the norm to a range of other so called <strong>l-norms</strong>. All of these are well defined norms following the rules that a norm should follow. By regularizing with l norms of different values of p, we can change the regularization behavior.</p><p    ></p>
+            <p    >To visualize this, we can color all points that are a fixed distance from the origin. If we use the norm as a penalty, these are all the models that get the same penalty.<br></p><p    >For the l2 norm, they form a circle. Or, in higher dimensions, a hypersphere.<br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -1653,7 +1649,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0127.svg" class="slide-image" />
 
             <figcaption>
-            <p    >To visualize this, we can color all points that are a fixed distance from the origin. If we use the norm as a penalty, these are all the models that get the same penalty.<br></p><p    >For the l2 norm, they form a circle. Or, in higher dimensions, a hypersphere.<br></p><p    ></p>
+            <p    >For the l1 norm, they form a diamond.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1666,7 +1662,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0128.svg" class="slide-image" />
 
             <figcaption>
-            <p    >For the l1 norm, they form a diamond.</p><p    ></p>
+            <p    ></p>
             </figcaption>
        </section>
 
@@ -1676,10 +1672,10 @@ slides: true
 
        <section id="slide-123">
             <a class="slide-link" href="https://dlvu.github.io/tools#slide-123" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0129.svg" class="slide-image" />
+            <img src="lecture04.tools.key-stage-0130.svg" class="slide-image" />
 
             <figcaption>
-            <p    ></p>
+            <p    >What does this mean for our regularization behavior with the l norms? For low p values (p=1 is most common), we are telling the learning algorithm that we prefer solutions closer to the origin (all else being equal). However, if the solution is far out into space, we also prefer it to align with the axes. A vector aligned with the axes gets to have a much high length (by l2 norm) than a vector at an angle of 45 degrees, for the same penalty.<br></p><p    >The effect is that we get, wherever possible, weight values that are exactly 0. Under the l2 norm, there is no difference between a values of 0.0 and a value of 0.0001. The l1 norm encodes a strong preference: weights of 0 are axis aligned, and so preferable.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1692,7 +1688,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0131.svg" class="slide-image" />
 
             <figcaption>
-            <p    >What does this mean for our regularization behavior with the l norms? For low p values (p=1 is most common), we are telling the learning algorithm that we prefer solutions closer to the origin (all else being equal). However, if the solution is far out into space, we also prefer it to align with the axes. A vector aligned with the axes gets to have a much high length (by l2 norm) than a vector at an angle of 45 degrees, for the same penalty.<br></p><p    >The effect is that we get, wherever possible, weight values that are exactly 0. Under the l2 norm, there is no difference between a values of 0.0 and a value of 0.0001. The l1 norm encodes a strong preference: weights of 0 are axis aligned, and so preferable.</p><p    ></p>
+            <p    >Here’s an analogy. Imagine you have a bowl, and you roll a marble down it to find the lowest point. Applying l2 loss is like tipping the bowl slightly to the right. You shift the lowest point in some direction (like to the origin).</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1705,7 +1701,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0132.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here’s an analogy. Imagine you have a bowl, and you roll a marble down it to find the lowest point. Applying l2 loss is like tipping the bowl slightly to the right. You shift the lowest point in some direction (like to the origin).</p><p    ></p>
+            <p    >L1 loss is like using a square bowl. It has grooves along the dimensions, so that when you tip the bowl, the marble is likely to end up in one of the grooves.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1718,7 +1714,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0133.svg" class="slide-image" />
 
             <figcaption>
-            <p    >L1 loss is like using a square bowl. It has grooves along the dimensions, so that when you tip the bowl, the marble is likely to end up in one of the grooves.</p><p    ></p>
+            <p    >Here is a loss landscape for a simple linear regression problem with two parameters. Brighter points have lower loss.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1731,7 +1727,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0134.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here is a loss landscape for a simple linear regression problem with two parameters. Brighter points have lower loss.</p><p    ></p>
+            <p    >And here it is with l2 loss. Note that the "cloud" of good solutions has widened and a little tuft has been pulled out towards the origin.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1744,7 +1740,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0135.svg" class="slide-image" />
 
             <figcaption>
-            <p    >And here it is with l2 loss. Note that the "cloud" of good solutions has widened and a little tuft has been pulled out towards the origin.</p><p    ></p>
+            <p    >And here it is for l1 loss. Note the "creases" in the surface along the axes.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1757,19 +1753,6 @@ slides: true
             <img src="lecture04.tools.key-stage-0136.svg" class="slide-image" />
 
             <figcaption>
-            <p    >And here it is for l1 loss. Note the "creases" in the surface along the axes.</p><p    ></p>
-            </figcaption>
-       </section>
-
-
-
-
-
-       <section id="slide-130">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-130" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0137.svg" class="slide-image" />
-
-            <figcaption>
             <p    >In practice, the l2 loss doesn't usually use the norm, but the squared norm, which is equal to the dot product of the weight vector with itself. This is cheaper and easier to implement and easier to analyze.<br></p><p    >It's not 100% the same (the square amplifies the effect of outliers), but the basic principle is similar.</p><p    ></p>
             </figcaption>
        </section>
@@ -1778,9 +1761,9 @@ slides: true
 
 
 
-       <section id="slide-131" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-131" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0138_animation_0000.svg" data-images="lecture04.tools.key-stage-0138_animation_0000.svg,lecture04.tools.key-stage-0138_animation_0001.svg,lecture04.tools.key-stage-0138_animation_0002.svg,lecture04.tools.key-stage-0138_animation_0003.svg,lecture04.tools.key-stage-0138_animation_0004.svg,lecture04.tools.key-stage-0138_animation_0005.svg" class="slide-image" />
+       <section id="slide-130" class="anim">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-130" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0137_animation_0000.svg" data-images="lecture04.tools.key-stage-0137_animation_0000.svg,lecture04.tools.key-stage-0137_animation_0001.svg,lecture04.tools.key-stage-0137_animation_0002.svg,lecture04.tools.key-stage-0137_animation_0003.svg,lecture04.tools.key-stage-0137_animation_0004.svg,lecture04.tools.key-stage-0137_animation_0005.svg" class="slide-image" />
 
             <figcaption>
             <p    >One consequence of using the squared norm instead of the norm in l2 loss, is that we<strong> if we use plain gradient descent</strong>, we can implement l2 loss as <strong>weight decay</strong>. In weight decay we simply shrink the weights a little after each gradient update by multiplying by a value gamma which is slightly less than 1.<br></p><p    >If we fill in the gradient for the penalized loss, we see that the penalty term rewrites into a simple negative term of the weights multiplied by a constant. The result that when we subtract this term, we are subtracting from weights a small multiple of themselves. For the correct value of gamma, the two approaches are equivalent. <br></p><p    ><em>If</em> we use plain gradient descent....</p><p    ></p>
@@ -1792,9 +1775,9 @@ slides: true
 
 
 
-       <section id="slide-132">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-132" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0139.svg" class="slide-image" />
+       <section id="slide-131">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-131" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0138.svg" class="slide-image" />
 
             <figcaption>
             <p    >The benefit of weight decay is a memory saving. Penalty terms extend the computation graph, whereas weight decay is a simple in-place computation on the weights outside of the computation graph. <br></p><p    >However, when we sue weight decay with other optimizers, it is no longer equivalent to l2 loss, unless we implement it differently. It may still work, but you should be aware of the implications. In practice, there are often specific implementations of optimizers (like AdamW) that implement weight decay in a way that is equivalent to l2 loss.</p><p    ></p>
@@ -1805,9 +1788,9 @@ slides: true
 
 
 
-       <section id="slide-133" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-133" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0140_animation_0000.svg" data-images="lecture04.tools.key-stage-0140_animation_0000.svg,lecture04.tools.key-stage-0140_animation_0001.svg,lecture04.tools.key-stage-0140_animation_0002.svg,lecture04.tools.key-stage-0140_animation_0003.svg,lecture04.tools.key-stage-0140_animation_0004.svg" class="slide-image" />
+       <section id="slide-132" class="anim">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-132" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0139_animation_0000.svg" data-images="lecture04.tools.key-stage-0139_animation_0000.svg,lecture04.tools.key-stage-0139_animation_0001.svg,lecture04.tools.key-stage-0139_animation_0002.svg,lecture04.tools.key-stage-0139_animation_0003.svg,lecture04.tools.key-stage-0139_animation_0004.svg" class="slide-image" />
 
             <figcaption>
             <p    >If our model is a probability distribution (like most neural networks are), then we can easily cast penalty terms as <em>priors</em>. This fits our view of regularization very well, since it's meant to tell us which models to prefer regardless of the data, exactly what a prior does as well.<br></p><p    >The analysis is simple. If we are maximizing the posterior probability (using the MAP criterion to choose a model), we are maximizing the product of the prior and the sampling distribution (aka the likelihood). Taking the negative logarithm, we see that we retrieve a loss with two terms: one involving the data, and one involving only the weights. The negative log of the prior functions as a penalty term. <br></p><p    >Many well-known priors correspond to well know regularizers. For instance, if we use a standard normal prior on our weights, the complicated expression of the normal distribution simplifies to a simple dot product of the weight with themselves: the (squared) l2 loss that we've seen already.</p><p    ></p>
@@ -1819,9 +1802,9 @@ slides: true
 
 
 
-       <section id="slide-134" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-134" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0141_animation_0000.svg" data-images="lecture04.tools.key-stage-0141_animation_0000.svg,lecture04.tools.key-stage-0141_animation_0001.svg,lecture04.tools.key-stage-0141_animation_0002.svg" class="slide-image" />
+       <section id="slide-133" class="anim">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-133" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0140_animation_0000.svg" data-images="lecture04.tools.key-stage-0140_animation_0000.svg,lecture04.tools.key-stage-0140_animation_0001.svg,lecture04.tools.key-stage-0140_animation_0002.svg" class="slide-image" />
 
             <figcaption>
             <p    >So what about this penalty hyperparameter alpha? It turns out that we can include that as well if we raise our prior probability density to the power alpha. Repeating the analysis from the previous slide shows that this results in a penalty term as before, but scaled by<span> alpha</span>.<br></p><p    >The only problem is that when we raise a probability density function to a power it stops summing/integrating to 1, so it's no longer a proper probability function. Therefore, we need to apply an additional normalization factor. Happily, this factor is constant with respect to the chosen weights w, so its term disappears from our loss function.<br></p><p    >What's the effect on the prior of raising it to a power like this? It's a little bit like adjusting the contrast in an image. If alpha is larger than 1, the difference between the large and small densities becomes more defined. In short our preferences becomes stronger. If it's less than 1, the differences become less defined and our preferences, while still the same, become less strong. This is exactly the effect that alpha has on our loss function.<br></p><p    >In the limit, as alpha goes to 0, the preferences disappear and we have a uniform preference over all models (although in practice, of course, we already have a load of implicit biases encoded in our search algorithm).<br></p><p    >In Bayesian parlance, adjusting a prior like this is known as <strong>tempering</strong>. </p><p    ></p>
@@ -1833,12 +1816,25 @@ slides: true
 
 
 
+       <section id="slide-134">
+            <a class="slide-link" href="https://dlvu.github.io/tools#slide-134" title="Link to this slide.">link here</a>
+            <img src="lecture04.tools.key-stage-0141.svg" class="slide-image" />
+
+            <figcaption>
+            <p    >Dropout is another regularization technique for large neural nets. During training, we simply remove hidden and input nodes (each with probability p).<br></p><p    >This prevents <em>co-adaptation</em>. Memorization (aka overfitting) often depends on multiple neurons firing together in specific configurations. Dropout prevents this.<br></p><p    ></p>
+            </figcaption>
+       </section>
+
+
+
+
+
        <section id="slide-135">
             <a class="slide-link" href="https://dlvu.github.io/tools#slide-135" title="Link to this slide.">link here</a>
             <img src="lecture04.tools.key-stage-0142.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Dropout is another regularization technique for large neural nets. During training, we simply remove hidden and input nodes (each with probability p).<br></p><p    >This prevents <em>co-adaptation</em>. Memorization (aka overfitting) often depends on multiple neurons firing together in specific configurations. Dropout prevents this.<br></p><p    ></p>
+            <p    >Once you’ve finished training and you’ve starting using the model, you turn off dropout. Since this increases the size of the activations, you should correct by a factor of p.<br></p><aside    >Here again, we see a situation where the model needs to know whether it’s training or predicting.<br></aside><aside    ></aside>
             </figcaption>
        </section>
 
@@ -1851,7 +1847,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0143.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Once you’ve finished training and you’ve starting using the model, you turn off dropout. Since this increases the size of the activations, you should correct by a factor of p.<br></p><aside    >Here again, we see a situation where the model needs to know whether it’s training or predicting.<br></aside><aside    ></aside>
+            <p    ><a href="https://twitter.com/Smerity/status/980175898119778304">https://twitter.com/Smerity/status/980175898119778304</a><br></p><p    ></p>
             </figcaption>
        </section>
 
@@ -1864,7 +1860,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0144.svg" class="slide-image" />
 
             <figcaption>
-            <p    ><a href="https://twitter.com/Smerity/status/980175898119778304">https://twitter.com/Smerity/status/980175898119778304</a><br></p><p    ></p>
+            <p    ></p>
             </figcaption>
        </section>
 
@@ -1877,7 +1873,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0145.svg" class="slide-image" />
 
             <figcaption>
-            <p    ></p>
+            <p    >Again, this is usually only done during training.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1890,7 +1886,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0146.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Again, this is usually only done during training.</p><p    ></p>
+            <p    >There is much more to be said about this, but for now, just remember that for small projects in computer vision and NLP, it's a no brainer to grab a large pretrained model and finetune it for your data.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -1903,7 +1899,7 @@ slides: true
             <img src="lecture04.tools.key-stage-0147.svg" class="slide-image" />
 
             <figcaption>
-            <p    >There is much more to be said about this, but for now, just remember that for small projects in computer vision and NLP, it's a no brainer to grab a large pretrained model and finetune it for your data.</p><p    ></p>
+            <p    ></p>
             </figcaption>
        </section>
 
@@ -1914,19 +1910,6 @@ slides: true
        <section id="slide-141">
             <a class="slide-link" href="https://dlvu.github.io/tools#slide-141" title="Link to this slide.">link here</a>
             <img src="lecture04.tools.key-stage-0148.svg" class="slide-image" />
-
-            <figcaption>
-            <p    ></p>
-            </figcaption>
-       </section>
-
-
-
-
-
-       <section id="slide-142">
-            <a class="slide-link" href="https://dlvu.github.io/tools#slide-142" title="Link to this slide.">link here</a>
-            <img src="lecture04.tools.key-stage-0149.svg" class="slide-image" />
 
             <figcaption>
             <p    ></p>
