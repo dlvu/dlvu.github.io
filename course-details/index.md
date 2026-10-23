@@ -7,28 +7,25 @@ slides: true
         <li class="home"><a href="/">Home</a></li>
         <li class="name">Course Details</li>
                 <li><a href="#video-000">Details</a></li>
-                <li><a href="#slide-012">Tips and tricks</a></li>
-        <li class="pdf"><a href="https://dlvu.github.io/pdfs/lecture0.course-details.annotated.pdf">PDF</a></li>
+                <li><a href="#slide-011">Tips and tricks</a></li>
+        <li class="pdf"><a href="...">PDF</a></li>
     </ul>
 </nav>
 
 <article class="slides">
 
-
-       <section class="video" id="video-000">
-           <a class="slide-link" href="https://dlvu.github.io/course-details#video-0">link here</a>
+        <section class="video" id="video-000">
+            <a class="slide-link" href="dlvu.github.io/course-details/#video-0">link here</a>
            <video controls>
                 <source src="https://surfdrive.surf.nl/index.php/s/NcX1nQ8YRTI5yZk/download" type="video/mp4" />
 
                 Download the <a href="https://surfdrive.surf.nl/index.php/s/NcX1nQ8YRTI5yZk/download">video</a>.
            </video>
-
-       </section>
-
+        </section>
 
 
        <section id="slide-001">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-001" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-001" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0001.svg" class="slide-image" />
 
             <figcaption>
@@ -41,7 +38,7 @@ slides: true
 
 
        <section id="slide-002">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-002" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-002" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0002.svg" class="slide-image" />
 
             <figcaption>
@@ -54,7 +51,7 @@ slides: true
 
 
        <section id="slide-003">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-003" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-003" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0003.svg" class="slide-image" />
 
             <figcaption>
@@ -67,8 +64,8 @@ slides: true
 
 
        <section id="slide-004" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-004" title="Link to this slide.">link here</a>
-            <img src="lecture00.course-details.key-stage-0004_animation_0000.svg" data-images="lecture00.course-details.key-stage-0004_animation_0000.svg,lecture00.course-details.key-stage-0004_animation_0001.svg" class="slide-image" />
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-004" title="Link to this slide.">link here</a>
+            <img src="lecture00.course-details.key-stage-0004anim0.png" data-images="lecture00.course-details.key-stage-0004anim0.png,lecture00.course-details.key-stage-0004anim1.png" class="slide-image" />
 
             <figcaption>
             <p    ></p>
@@ -81,7 +78,7 @@ slides: true
 
 
        <section id="slide-005">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-005" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-005" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0005.svg" class="slide-image" />
 
             <figcaption>
@@ -94,7 +91,7 @@ slides: true
 
 
        <section id="slide-006">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-006" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-006" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0006.svg" class="slide-image" />
 
             <figcaption>
@@ -107,7 +104,7 @@ slides: true
 
 
        <section id="slide-007">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-007" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-007" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0007.svg" class="slide-image" />
 
             <figcaption>
@@ -120,11 +117,11 @@ slides: true
 
 
        <section id="slide-008">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-008" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-008" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0008.svg" class="slide-image" />
 
             <figcaption>
-            <p    >You can find the schedule for the practicals on Canvas (under Pages &gt; Practicals) and you can sign up to a group of your choice (under People &gt; Practicals). <br></p><p    >You don’t have to have finished the assignment before the practical, but you should have <em>started</em>. Make sure to show up to the practical with questions ready, or at least knowing which parts of the assignment you have difficulty with.</p><p    ></p>
+            <p    >You don’t have to have finished the assignment before the practical, but you should have <em>started</em>. Make sure to show up to the practical with questions ready, or at least knowing which parts of the assignment you have difficulty with.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -133,7 +130,7 @@ slides: true
 
 
        <section id="slide-009">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-009" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-009" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0009.svg" class="slide-image" />
 
             <figcaption>
@@ -146,7 +143,7 @@ slides: true
 
 
        <section id="slide-010">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-010" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-010" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0010.svg" class="slide-image" />
 
             <figcaption>
@@ -159,20 +156,7 @@ slides: true
 
 
        <section id="slide-011">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-011" title="Link to this slide.">link here</a>
-            <img src="lecture00.course-details.key-stage-0011.svg" class="slide-image" />
-
-            <figcaption>
-            <p    ><br></p><p    >This is the first year that the course is an obligatory part of the AI program. You can choose whether to do it in the first or second year, but you have to do it at some point. <br></p><p    >This means we get a lot more students (roughly 300 instead of 200) but the pool of TAs (last year’s students) stays the same. In short, this is going to be a tricky, year, so we ask for your patience if some things don’t run as smooth as everybody would like. <br></p><p    >It also means that a lot of these extra students wouldn’t have chosen Deep Learning if they weren’t forced to.If this is you, you may find the course more difficult than other students: you may not be confident you have the right preliminaries, and you may not be as motivated by the subjects as those students who would have chosen the course anyway had it been an elective. <br></p><p    >To help you out, we’ve added Q&amp;A sessions to the schedule on the first four Fridays. Here, one of the week’s lecturers (Shujian or Peter) will be available to go over the material again. It’s great if you have specific questions, but you can also just ask for something to be explained again, or perhaps for us to explain some preliminaries.</p><p    ></p>
-            </figcaption>
-       </section>
-
-
-
-
-
-       <section id="slide-012">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-012" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-011" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0012.svg" class="slide-image" />
 
             <figcaption>
@@ -184,8 +168,8 @@ slides: true
 
 
 
-       <section id="slide-013">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-013" title="Link to this slide.">link here</a>
+       <section id="slide-012">
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-012" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0013.svg" class="slide-image" />
 
             <figcaption>
@@ -197,8 +181,8 @@ slides: true
 
 
 
-       <section id="slide-014">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-014" title="Link to this slide.">link here</a>
+       <section id="slide-013">
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-013" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0014.svg" class="slide-image" />
 
             <figcaption>
@@ -210,12 +194,12 @@ slides: true
 
 
 
-       <section id="slide-015">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-015" title="Link to this slide.">link here</a>
+       <section id="slide-014">
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-014" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0015.svg" class="slide-image" />
 
             <figcaption>
-            <p    >The first assignment is standard fare for a deep learning course. So standard in fact, that ChatGPT (or even plain old Google) can do it for you in five minutes flat. We know this, and we can’t stop you. The important thing to realize is that <strong>assignment 2 and the ones that follow it </strong><em>aren’t</em><strong> standard</strong>. For most of them, GPT isn’t going to be able to do the hard work for you. And if you don’t put the work into assignment 1, you won’t understand assignment 2. <br></p><p    >So, in short, if you use ChatGPT for assignment 1, you will only be shooting yourself in the foot. Building a neural network from scratch, by yourself is a fundamental foundation that we are going to build on in the rest of the course. It’s also something that every Deep Learning practitioner has done at least once, so you shouldn’t deny yourself the experience. If you do, then the rest of the material simply won’t make sense and you will lack crucial experience that people will expect you to have, based on your diploma.<br></p><p    >Assignment 1 can be a tough exercise with lots of debugging and headscratching, so please start early, and give yourself time to struggle with it for while. It may be unpleasant, but it’s an important learning experience.</p><p    ></p>
+            <p    >The first assignment is standard fare for a deep learning course. So standard in fact, that ChatGPT (or even plain old Google) can do it for you in five minutes flat. We know this, and we can’t stop you. The important thing to realize is that <strong>assignment 2 and the ones that follow it </strong><em>aren’t</em><strong> standard</strong>. And if you don’t put the work into assignment 1, you won’t understand assignment 2. <br></p><p    >So, in short, if you use ChatGPT for assignment 1, you will only be shooting yourself in the foot. Building a neural network from scratch, by yourself is a fundamental foundation that we are going to build on in the rest of the course. It’s also something that every Deep Learning practitioner has done at least once, so you shouldn’t deny yourself the experience. If you do, then the rest of the material simply won’t make sense and you will lack crucial experience that people will expect you to have, based on your diploma.<br></p><p    >Assignment 1 can be a tough exercise with lots of debugging and headscratching, so please start early, and give yourself time to struggle with it for while. It may be unpleasant, but it’s an important learning experience.</p><p    ></p>
             </figcaption>
        </section>
 
@@ -223,8 +207,8 @@ slides: true
 
 
 
-       <section id="slide-016">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-016" title="Link to this slide.">link here</a>
+       <section id="slide-015">
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-015" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0016.svg" class="slide-image" />
 
             <figcaption>
@@ -236,9 +220,9 @@ slides: true
 
 
 
-       <section id="slide-017" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-017" title="Link to this slide.">link here</a>
-            <img src="lecture00.course-details.key-stage-0017_animation_0000.svg" data-images="lecture00.course-details.key-stage-0017_animation_0000.svg,lecture00.course-details.key-stage-0017_animation_0001.svg,lecture00.course-details.key-stage-0017_animation_0002.svg,lecture00.course-details.key-stage-0017_animation_0003.svg" class="slide-image" />
+       <section id="slide-016" class="anim">
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-016" title="Link to this slide.">link here</a>
+            <img src="lecture00.course-details.key-stage-0017anim0.svg" data-images="lecture00.course-details.key-stage-0017anim0.svg,lecture00.course-details.key-stage-0017anim1.svg,lecture00.course-details.key-stage-0017anim2.svg,lecture00.course-details.key-stage-0017anim3.svg" class="slide-image" />
 
             <figcaption>
             <p    >Finally, if you have any further questions, you are free to get in touch with us about anything you like. We love to hear from you, but we do ask that you read the whole syllabus first. That is, the page you find under “Home” on Canvas. Read that from top to bottom, note the FAQ, and then ask anything you like.<br></p><p    >Then, note that if your question is of general use, you should ask it on the Discussion board. You will get a quicker and more thorough reply there than over email.<br></p><p    ><strong>Finally, do </strong><em>not</em><strong> use the Canvas messaging system to get in touch with us.</strong> Use email. If you use the canvas messaging system you will not get a reply (or at best a reply asking to email us).<br></p><p    ><em>It’s unfortunate that this is offered so prominently, and you are forgiven for thinking that this is the way to get in touch with a teacher, but the messaging system is worse than useless. It offers no useful way to maintain a messaging history, so we really need to avoid using it if we are going to manage hundreds of students.</em></p><p    ><em></em></p>
@@ -250,8 +234,8 @@ slides: true
 
 
 
-       <section id="slide-018">
-            <a class="slide-link" href="https://dlvu.github.io/course-details#slide-018" title="Link to this slide.">link here</a>
+       <section id="slide-017">
+            <a class="slide-link" href="dlvu.github.io/course-details/#slide-017" title="Link to this slide.">link here</a>
             <img src="lecture00.course-details.key-stage-0018.svg" class="slide-image" />
 
             <figcaption>
