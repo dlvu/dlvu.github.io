@@ -129,10 +129,10 @@ title: Deep Learning @ VU
     <td>
       <h3>3. Convolutions </h3>
       <ul class="videos">
-      <li><a href="./cnns/#video-000">3.1 Introduction</a></li>
-      <li><a href="./cnns/#video-016">3.2 Conv1D (a)</a></li>
-      <li><a href="./cnns/#video-042">3.3 Conv1D (b)</a></li>
-      <li><a href="./cnns/#video-060">3.3 Conv2D, Conv3D, ConvND</a></li>
+      <li><a href="cnns-old/#video-000">3.1 Introduction</a></li>
+      <li><a href="cnns-old/#video-016">3.2 Conv1D (a)</a></li>
+      <li><a href="cnns-old/#video-042">3.3 Conv1D (b)</a></li>
+      <li><a href="cnns-old/#video-060">3.3 Conv2D, Conv3D, ConvND</a></li>
       </ul>
     </td>
     <td>Michel Cochez</td>
