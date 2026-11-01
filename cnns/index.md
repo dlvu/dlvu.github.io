@@ -321,14 +321,13 @@ slides: true
 
 
 
-       <section id="slide-024" class="anim">
+       <section id="slide-024">
             <a class="slide-link" href="https://dlvu.github.io/cnns#slide-024" title="Link to this slide.">link here</a>
-            <img src="lecture03.convolutions.key-stage-0025anim0.svg" data-images="lecture03.convolutions.key-stage-0025anim0.svg,lecture03.convolutions.key-stage-0025anim1.svg" class="slide-image" />
+            <img src="lecture03.convolutions.key-stage-0025.svg" class="slide-image" />
 
             <figcaption>
             <p    >Here’s how a single fully connected layer looks if we don’t flatten the input image first, and we give it a hidden layer with the same number of units.<br></p><p    >We’ve arranged the hidden layer in the shape of a grid as well, although with a fully connected layer, that means little. Every output pixel is connected with every input pixel. For a 9×9 input image, this gives us 81 weight for every node in the hidden layer, and 81<sup>2</sup> = 6561 distinct weights in total. <br></p><p    >To turn this into a (3×3) convolutional layer, we do two things. First, we remove all connections that are not in the output pixels 3×3 neighborhood. This leaves us with just 9 connections per output pixel. Second, we <em>share </em>the weights between the convolutions. Whatever weight we apply to the middle pixel of the green patch (top left), we apply the same weight to the middle pixel of the blue patch (bottom right), and for every other patch. <br></p><p    >This means that as a whole, the convolution has only 9 weights. Each weight is applied 81 times. This means it will also get 81 different signals from the backpropagation algorithm, which will work into a single gradient. If we follow the backpropogation algorithm carefully, the right way to do this will emerge clearly. </p><p    ></p>
             </figcaption>
-            <span class="hint">click image for animation</span>
        </section>
 
 
@@ -473,7 +472,7 @@ slides: true
             <img src="lecture03.convolutions.key-stage-0036anim0.svg" data-images="lecture03.convolutions.key-stage-0036anim0.svg,lecture03.convolutions.key-stage-0036anim1.svg" class="slide-image" />
 
             <figcaption>
-            <p    >We can also have other kinds of images with multitple channels. A common example is satellite imagery. Satellites often have cameras that take grayscale pictures at a specific wavelength (if the signal is string at that wavelength, the pixel is bright). They then take these kinds of pictures for several wavelengths and stack them together. This is similar to the RGB image, except that red green and blue are wavelengths that we can see, and satellites usually look at a broader range of wavelengths, far outside what we can see (like infrared and ultraviolet).<br></p><p    >The result is that when you look at satellite imagery, you will get a 3 tensor with more than three channels.</p><p    ></p>
+            <p    >We can also have other kinds of images with multitple channels. A common example is satellite imagery. Satellites often have cameras that take grayscale pictures at a specific wavelength (if the signal is string at that wavelength, the pixel is bright). They then take these kinds of pictures for several wavelengths and stack them together. This is similar to the RGB image, except that red green and blue are wavelengths that we can see, and satellites usually look at a broader range of wavelengths, far outside what we can see (like infrared and ultraviolet).<br></p><p    >The result is that when you look at satellite imagery, you will get a 3 tensor with more than three channels.<br></p><p    >image source: <a href="https://en.wikipedia.org/wiki/File:NASA_SDO_multispectral_view_of_the_Sun,_September_2011.ogv"><strong>https://en.wikipedia.org/wiki/File:NASA_SDO_multispectral_view_of_the_Sun,_September_2011.ogv</strong></a> </p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
@@ -552,7 +551,7 @@ slides: true
             <img src="lecture03.convolutions.key-stage-0042anim0.svg" data-images="lecture03.convolutions.key-stage-0042anim0.svg,lecture03.convolutions.key-stage-0042anim1.svg,lecture03.convolutions.key-stage-0042anim2.svg,lecture03.convolutions.key-stage-0042anim3.svg,lecture03.convolutions.key-stage-0042anim4.svg,lecture03.convolutions.key-stage-0042anim5.svg,lecture03.convolutions.key-stage-0042anim6.svg,lecture03.convolutions.key-stage-0042anim7.svg" class="slide-image" />
 
             <figcaption>
-            <p    >Here’s an exercise to see if you get the basic idea.<br></p><p    >Note first that the padding gives us an 8x8 image. Sliding a 3x3 kernel over this image, we see that we can fit 6 such kernels horizontally (this is one per column, minus 2 because the kernel window hits the right edge). The same thing holds for the rows, to we get 6 by 6 distinct windows. Since the output has 3 channels, we repeat this trick with 3 different kernels, so that we get an output tensor with dimensions 3 x 6 x 6.<br></p><p    >Each 3 x 3 kernel has 9 weights, and there are repeated at each position in the image. That means that no matter how big the image is, we never get more than 9 weights. However, the output has 3 channels, so we have 3 different kernels. The result is that we have 3 · 9 = 27 distinct weights.</p><p    ></p>
+            <p    >Here’s an exercise to see if you get the basic idea.<br></p><p    ><span class="answer">Note first that the padding gives us an 8x8 image. Sliding a 3x3 kernel over this image, we see that we can fit 6 such kernels horizontally (this is one per column, minus 2 because the kernel window hits the right edge). The same thing holds for the rows, to we get 6 by 6 distinct windows. Since the output has 3 channels, we repeat this trick with 3 different kernels, so that we get an output tensor with dimensions 3 x 6 x 6.<br></p><p    >Each 3 x 3 kernel has 9 weights, and there are repeated at each position in the image. That means that no matter how big the image is, we never get more than 9 weights. However, the output has 3 channels, so we have 3 different kernels. The result is that we have 3 · 9 = 27 distinct weights.</span></p><p    ></p>
             </figcaption>
             <span class="hint">click image for animation</span>
        </section>
