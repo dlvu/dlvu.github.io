@@ -7,8 +7,8 @@ slides: true
         <li class="home"><a href="/">Home</a></li>
         <li class="name">Convolutions</li>
                 <li><a href="#video-000">Why convolutions?</a></li>
-                <li><a href="#video-021">Learning convolutions?</a></li>
-                <li><a href="#video-062">Why convolutions?</a></li>
+                <li><a href="#video-021">Learning convolutions</a></li>
+                <li><a href="#video-062">Convolutional architectures</a></li>
         <li class="pdf"><a href="https://dlvu.github.io/pdfs/lecture03.convolutions.pdf">PDF</a></li>
     </ul>
 </nav>
@@ -847,7 +847,7 @@ slides: true
             <img src="lecture03.convolutions.key-stage-0065.svg" class="slide-image" />
 
             <figcaption>
-            <p    ><br><br></p><p    >We’ll finish up with a</p><p    ></p>
+            <p    ></p><p    ></p>
             </figcaption>
        </section>
 
