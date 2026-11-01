@@ -18,7 +18,7 @@ slides: true
 
 
        <section id="slide-001">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-001" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-001" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0001.svg" class="slide-image" />
 
             <figcaption>
@@ -31,7 +31,7 @@ slides: true
 
 
        <section id="slide-002">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-002" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-002" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0002.svg" class="slide-image" />
 
             <figcaption>
@@ -44,7 +44,7 @@ slides: true
 
 
        <section id="slide-003">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-003" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-003" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0003.svg" class="slide-image" />
 
             <figcaption>
@@ -57,7 +57,7 @@ slides: true
 
 
        <section id="slide-004" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-004" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-004" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0004anim0.svg" data-images="lecture03.convolutions.key-stage-0004anim0.svg,lecture03.convolutions.key-stage-0004anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -71,7 +71,7 @@ slides: true
 
 
        <section id="slide-005">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-005" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-005" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0005.png" class="slide-image" />
 
             <figcaption>
@@ -84,7 +84,7 @@ slides: true
 
 
        <section id="slide-006">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-006" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-006" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0006.svg" class="slide-image" />
 
             <figcaption>
@@ -97,7 +97,7 @@ slides: true
 
 
        <section id="slide-007" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-007" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-007" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0007anim0.png" data-images="lecture03.convolutions.key-stage-0007anim0.png,lecture03.convolutions.key-stage-0007anim1.png" class="slide-image" />
 
             <figcaption>
@@ -111,7 +111,7 @@ slides: true
 
 
        <section id="slide-008">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-008" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-008" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0008.png" class="slide-image" />
 
             <figcaption>
@@ -124,7 +124,7 @@ slides: true
 
 
        <section id="slide-009">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-009" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-009" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0009.png" class="slide-image" />
 
             <figcaption>
@@ -137,7 +137,7 @@ slides: true
 
 
        <section id="slide-010">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-010" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-010" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0010.svg" class="slide-image" />
 
             <figcaption>
@@ -150,7 +150,7 @@ slides: true
 
 
        <section id="slide-011" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-011" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-011" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0011anim0.svg" data-images="lecture03.convolutions.key-stage-0011anim0.svg,lecture03.convolutions.key-stage-0011anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -164,7 +164,7 @@ slides: true
 
 
        <section id="slide-012" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-012" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-012" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0012anim0.svg" data-images="lecture03.convolutions.key-stage-0012anim0.svg,lecture03.convolutions.key-stage-0012anim1.svg,lecture03.convolutions.key-stage-0012anim2.svg,lecture03.convolutions.key-stage-0012anim3.svg" class="slide-image" />
 
             <figcaption>
@@ -178,7 +178,7 @@ slides: true
 
 
        <section id="slide-013" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-013" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-013" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0013anim0.svg" data-images="lecture03.convolutions.key-stage-0013anim0.svg,lecture03.convolutions.key-stage-0013anim1.svg,lecture03.convolutions.key-stage-0013anim2.svg,lecture03.convolutions.key-stage-0013anim3.svg,lecture03.convolutions.key-stage-0013anim4.svg,lecture03.convolutions.key-stage-0013anim5.svg,lecture03.convolutions.key-stage-0013anim6.svg,lecture03.convolutions.key-stage-0013anim7.svg" class="slide-image" />
 
             <figcaption>
@@ -192,7 +192,7 @@ slides: true
 
 
        <section id="slide-014">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-014" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-014" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0015.svg" class="slide-image" />
 
             <figcaption>
@@ -205,7 +205,7 @@ slides: true
 
 
        <section id="slide-015">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-015" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-015" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0016.svg" class="slide-image" />
 
             <figcaption>
@@ -218,7 +218,7 @@ slides: true
 
 
        <section id="slide-016">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-016" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-016" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0017.svg" class="slide-image" />
 
             <figcaption>
@@ -231,7 +231,7 @@ slides: true
 
 
        <section id="slide-017">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-017" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-017" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0018.svg" class="slide-image" />
 
             <figcaption>
@@ -244,7 +244,7 @@ slides: true
 
 
        <section id="slide-018">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-018" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-018" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0019.svg" class="slide-image" />
 
             <figcaption>
@@ -257,7 +257,7 @@ slides: true
 
 
        <section id="slide-019">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-019" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-019" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0020.svg" class="slide-image" />
 
             <figcaption>
@@ -270,7 +270,7 @@ slides: true
 
 
        <section id="slide-020">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-020" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-020" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0021.svg" class="slide-image" />
 
             <figcaption>
@@ -283,7 +283,7 @@ slides: true
 
 
        <section id="slide-021">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-021" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-021" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0022.svg" class="slide-image" />
 
             <figcaption>
@@ -296,7 +296,7 @@ slides: true
 
 
        <section id="slide-022">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-022" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-022" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0023.svg" class="slide-image" />
 
             <figcaption>
@@ -309,7 +309,7 @@ slides: true
 
 
        <section id="slide-023">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-023" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-023" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0024.svg" class="slide-image" />
 
             <figcaption>
@@ -322,7 +322,7 @@ slides: true
 
 
        <section id="slide-024" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-024" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-024" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0025anim0.svg" data-images="lecture03.convolutions.key-stage-0025anim0.svg,lecture03.convolutions.key-stage-0025anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -336,7 +336,7 @@ slides: true
 
 
        <section id="slide-025">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-025" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-025" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0026.svg" class="slide-image" />
 
             <figcaption>
@@ -349,7 +349,7 @@ slides: true
 
 
        <section id="slide-026">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-026" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-026" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0027.svg" class="slide-image" />
 
             <figcaption>
@@ -362,7 +362,7 @@ slides: true
 
 
        <section id="slide-027">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-027" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-027" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0028.svg" class="slide-image" />
 
             <figcaption>
@@ -375,7 +375,7 @@ slides: true
 
 
        <section id="slide-028">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-028" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-028" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0029.svg" class="slide-image" />
 
             <figcaption>
@@ -388,7 +388,7 @@ slides: true
 
 
        <section id="slide-029">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-029" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-029" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0030.svg" class="slide-image" />
 
             <figcaption>
@@ -401,7 +401,7 @@ slides: true
 
 
        <section id="slide-030" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-030" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-030" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0031anim0.svg" data-images="lecture03.convolutions.key-stage-0031anim0.svg,lecture03.convolutions.key-stage-0031anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -415,7 +415,7 @@ slides: true
 
 
        <section id="slide-031" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-031" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-031" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0032anim0.svg" data-images="lecture03.convolutions.key-stage-0032anim0.svg,lecture03.convolutions.key-stage-0032anim1.svg,lecture03.convolutions.key-stage-0032anim2.svg,lecture03.convolutions.key-stage-0032anim3.svg,lecture03.convolutions.key-stage-0032anim4.svg" class="slide-image" />
 
             <figcaption>
@@ -429,7 +429,7 @@ slides: true
 
 
        <section id="slide-032">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-032" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-032" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0033.svg" class="slide-image" />
 
             <figcaption>
@@ -442,7 +442,7 @@ slides: true
 
 
        <section id="slide-033" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-033" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-033" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0034anim0.svg" data-images="lecture03.convolutions.key-stage-0034anim0.svg,lecture03.convolutions.key-stage-0034anim1.svg,lecture03.convolutions.key-stage-0034anim2.svg,lecture03.convolutions.key-stage-0034anim3.svg,lecture03.convolutions.key-stage-0034anim4.svg" class="slide-image" />
 
             <figcaption>
@@ -456,7 +456,7 @@ slides: true
 
 
        <section id="slide-034">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-034" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-034" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0035.svg" class="slide-image" />
 
             <figcaption>
@@ -469,7 +469,7 @@ slides: true
 
 
        <section id="slide-035" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-035" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-035" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0036anim0.svg" data-images="lecture03.convolutions.key-stage-0036anim0.svg,lecture03.convolutions.key-stage-0036anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -483,7 +483,7 @@ slides: true
 
 
        <section id="slide-036">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-036" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-036" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0037.png" class="slide-image" />
 
             <figcaption>
@@ -496,7 +496,7 @@ slides: true
 
 
        <section id="slide-037">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-037" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-037" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0038.svg" class="slide-image" />
 
             <figcaption>
@@ -509,7 +509,7 @@ slides: true
 
 
        <section id="slide-038">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-038" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-038" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0039.svg" class="slide-image" />
 
             <figcaption>
@@ -522,7 +522,7 @@ slides: true
 
 
        <section id="slide-039">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-039" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-039" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0040.svg" class="slide-image" />
 
             <figcaption>
@@ -535,7 +535,7 @@ slides: true
 
 
        <section id="slide-040">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-040" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-040" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0041.svg" class="slide-image" />
 
             <figcaption>
@@ -548,7 +548,7 @@ slides: true
 
 
        <section id="slide-041" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-041" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-041" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0042anim0.svg" data-images="lecture03.convolutions.key-stage-0042anim0.svg,lecture03.convolutions.key-stage-0042anim1.svg,lecture03.convolutions.key-stage-0042anim2.svg,lecture03.convolutions.key-stage-0042anim3.svg,lecture03.convolutions.key-stage-0042anim4.svg,lecture03.convolutions.key-stage-0042anim5.svg,lecture03.convolutions.key-stage-0042anim6.svg,lecture03.convolutions.key-stage-0042anim7.svg" class="slide-image" />
 
             <figcaption>
@@ -562,7 +562,7 @@ slides: true
 
 
        <section id="slide-042">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-042" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-042" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0043.svg" class="slide-image" />
 
             <figcaption>
@@ -575,7 +575,7 @@ slides: true
 
 
        <section id="slide-043">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-043" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-043" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0044.svg" class="slide-image" />
 
             <figcaption>
@@ -588,7 +588,7 @@ slides: true
 
 
        <section id="slide-044">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-044" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-044" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0045.svg" class="slide-image" />
 
             <figcaption>
@@ -601,7 +601,7 @@ slides: true
 
 
        <section id="slide-045">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-045" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-045" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0047.svg" class="slide-image" />
 
             <figcaption>
@@ -614,7 +614,7 @@ slides: true
 
 
        <section id="slide-046">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-046" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-046" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0048.svg" class="slide-image" />
 
             <figcaption>
@@ -627,7 +627,7 @@ slides: true
 
 
        <section id="slide-047">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-047" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-047" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0049.svg" class="slide-image" />
 
             <figcaption>
@@ -640,7 +640,7 @@ slides: true
 
 
        <section id="slide-048" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-048" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-048" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0050anim0.svg" data-images="lecture03.convolutions.key-stage-0050anim0.svg,lecture03.convolutions.key-stage-0050anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -654,7 +654,7 @@ slides: true
 
 
        <section id="slide-049">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-049" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-049" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0051.png" class="slide-image" />
 
             <figcaption>
@@ -667,7 +667,7 @@ slides: true
 
 
        <section id="slide-050" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-050" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-050" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0052anim0.svg" data-images="lecture03.convolutions.key-stage-0052anim0.svg,lecture03.convolutions.key-stage-0052anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -681,7 +681,7 @@ slides: true
 
 
        <section id="slide-051">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-051" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-051" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0053.svg" class="slide-image" />
 
             <figcaption>
@@ -694,7 +694,7 @@ slides: true
 
 
        <section id="slide-052">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-052" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-052" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0054.svg" class="slide-image" />
 
             <figcaption>
@@ -707,7 +707,7 @@ slides: true
 
 
        <section id="slide-053">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-053" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-053" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0055.svg" class="slide-image" />
 
             <figcaption>
@@ -720,7 +720,7 @@ slides: true
 
 
        <section id="slide-054">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-054" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-054" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0056.svg" class="slide-image" />
 
             <figcaption>
@@ -733,7 +733,7 @@ slides: true
 
 
        <section id="slide-055">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-055" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-055" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0057.svg" class="slide-image" />
 
             <figcaption>
@@ -746,7 +746,7 @@ slides: true
 
 
        <section id="slide-056" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-056" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-056" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0058anim0.svg" data-images="lecture03.convolutions.key-stage-0058anim0.svg,lecture03.convolutions.key-stage-0058anim1.svg,lecture03.convolutions.key-stage-0058anim2.svg,lecture03.convolutions.key-stage-0058anim3.svg" class="slide-image" />
 
             <figcaption>
@@ -760,7 +760,7 @@ slides: true
 
 
        <section id="slide-057">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-057" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-057" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0059.svg" class="slide-image" />
 
             <figcaption>
@@ -773,7 +773,7 @@ slides: true
 
 
        <section id="slide-058" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-058" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-058" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0060anim0.svg" data-images="lecture03.convolutions.key-stage-0060anim0.svg,lecture03.convolutions.key-stage-0060anim1.svg,lecture03.convolutions.key-stage-0060anim2.svg,lecture03.convolutions.key-stage-0060anim3.svg" class="slide-image" />
 
             <figcaption>
@@ -787,7 +787,7 @@ slides: true
 
 
        <section id="slide-059" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-059" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-059" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0061anim0.svg" data-images="lecture03.convolutions.key-stage-0061anim0.svg,lecture03.convolutions.key-stage-0061anim1.svg,lecture03.convolutions.key-stage-0061anim2.svg,lecture03.convolutions.key-stage-0061anim3.svg,lecture03.convolutions.key-stage-0061anim4.svg,lecture03.convolutions.key-stage-0061anim5.svg,lecture03.convolutions.key-stage-0061anim6.svg" class="slide-image" />
 
             <figcaption>
@@ -801,7 +801,7 @@ slides: true
 
 
        <section id="slide-060" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-060" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-060" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0062anim0.svg" data-images="lecture03.convolutions.key-stage-0062anim0.svg,lecture03.convolutions.key-stage-0062anim1.svg,lecture03.convolutions.key-stage-0062anim2.svg,lecture03.convolutions.key-stage-0062anim3.svg" class="slide-image" />
 
             <figcaption>
@@ -815,7 +815,7 @@ slides: true
 
 
        <section id="slide-061" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-061" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-061" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0063anim0.svg" data-images="lecture03.convolutions.key-stage-0063anim0.svg,lecture03.convolutions.key-stage-0063anim1.svg,lecture03.convolutions.key-stage-0063anim2.svg,lecture03.convolutions.key-stage-0063anim3.svg,lecture03.convolutions.key-stage-0063anim4.svg,lecture03.convolutions.key-stage-0063anim5.svg,lecture03.convolutions.key-stage-0063anim6.svg,lecture03.convolutions.key-stage-0063anim7.svg,lecture03.convolutions.key-stage-0063anim8.svg,lecture03.convolutions.key-stage-0063anim9.svg" class="slide-image" />
 
             <figcaption>
@@ -829,7 +829,7 @@ slides: true
 
 
        <section id="slide-062" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-062" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-062" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0064anim0.svg" data-images="lecture03.convolutions.key-stage-0064anim0.svg,lecture03.convolutions.key-stage-0064anim1.svg,lecture03.convolutions.key-stage-0064anim2.svg,lecture03.convolutions.key-stage-0064anim3.svg,lecture03.convolutions.key-stage-0064anim4.svg,lecture03.convolutions.key-stage-0064anim5.svg" class="slide-image" />
 
             <figcaption>
@@ -843,7 +843,7 @@ slides: true
 
 
        <section id="slide-063">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-063" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-063" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0065.svg" class="slide-image" />
 
             <figcaption>
@@ -856,7 +856,7 @@ slides: true
 
 
        <section id="slide-064">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-064" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-064" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0066.svg" class="slide-image" />
 
             <figcaption>
@@ -869,7 +869,7 @@ slides: true
 
 
        <section id="slide-065">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-065" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-065" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0067.svg" class="slide-image" />
 
             <figcaption>
@@ -882,7 +882,7 @@ slides: true
 
 
        <section id="slide-066">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-066" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-066" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0068.svg" class="slide-image" />
 
             <figcaption>
@@ -895,7 +895,7 @@ slides: true
 
 
        <section id="slide-067">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-067" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-067" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0069.svg" class="slide-image" />
 
             <figcaption>
@@ -908,7 +908,7 @@ slides: true
 
 
        <section id="slide-068">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-068" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-068" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0070.svg" class="slide-image" />
 
             <figcaption>
@@ -921,7 +921,7 @@ slides: true
 
 
        <section id="slide-069">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-069" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-069" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0071.svg" class="slide-image" />
 
             <figcaption>
@@ -934,7 +934,7 @@ slides: true
 
 
        <section id="slide-070">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-070" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-070" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0072.svg" class="slide-image" />
 
             <figcaption>
@@ -947,7 +947,7 @@ slides: true
 
 
        <section id="slide-071" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-071" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-071" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0073anim0.svg" data-images="lecture03.convolutions.key-stage-0073anim0.svg,lecture03.convolutions.key-stage-0073anim1.svg,lecture03.convolutions.key-stage-0073anim2.svg,lecture03.convolutions.key-stage-0073anim3.svg" class="slide-image" />
 
             <figcaption>
@@ -961,7 +961,7 @@ slides: true
 
 
        <section id="slide-072">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-072" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-072" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0074.svg" class="slide-image" />
 
             <figcaption>
@@ -974,7 +974,7 @@ slides: true
 
 
        <section id="slide-073">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-073" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-073" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0075.svg" class="slide-image" />
 
             <figcaption>
@@ -987,7 +987,7 @@ slides: true
 
 
        <section id="slide-074">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-074" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-074" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0076.svg" class="slide-image" />
 
             <figcaption>
@@ -1000,7 +1000,7 @@ slides: true
 
 
        <section id="slide-075">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-075" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-075" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0077.svg" class="slide-image" />
 
             <figcaption>
@@ -1013,7 +1013,7 @@ slides: true
 
 
        <section id="slide-076">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-076" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-076" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0078.svg" class="slide-image" />
 
             <figcaption>
@@ -1026,7 +1026,7 @@ slides: true
 
 
        <section id="slide-077">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-077" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-077" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0079.svg" class="slide-image" />
 
             <figcaption>
@@ -1039,7 +1039,7 @@ slides: true
 
 
        <section id="slide-078">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-078" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-078" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0080.svg" class="slide-image" />
 
             <figcaption>
@@ -1052,7 +1052,7 @@ slides: true
 
 
        <section id="slide-079" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-079" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-079" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0081anim0.svg" data-images="lecture03.convolutions.key-stage-0081anim0.svg,lecture03.convolutions.key-stage-0081anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -1066,7 +1066,7 @@ slides: true
 
 
        <section id="slide-080" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-080" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-080" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0082anim0.svg" data-images="lecture03.convolutions.key-stage-0082anim0.svg,lecture03.convolutions.key-stage-0082anim1.svg,lecture03.convolutions.key-stage-0082anim2.svg" class="slide-image" />
 
             <figcaption>
@@ -1080,7 +1080,7 @@ slides: true
 
 
        <section id="slide-081" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-081" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-081" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0083anim0.svg" data-images="lecture03.convolutions.key-stage-0083anim0.svg,lecture03.convolutions.key-stage-0083anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -1094,7 +1094,7 @@ slides: true
 
 
        <section id="slide-082" class="anim">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-082" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-082" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0084anim0.svg" data-images="lecture03.convolutions.key-stage-0084anim0.svg,lecture03.convolutions.key-stage-0084anim1.svg" class="slide-image" />
 
             <figcaption>
@@ -1108,7 +1108,7 @@ slides: true
 
 
        <section id="slide-083">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-083" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-083" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0085.svg" class="slide-image" />
 
             <figcaption>
@@ -1121,7 +1121,7 @@ slides: true
 
 
        <section id="slide-084">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-084" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-084" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0086.svg" class="slide-image" />
 
             <figcaption>
@@ -1134,7 +1134,7 @@ slides: true
 
 
        <section id="slide-085">
-            <a class="slide-link" href="https://dlvu.github.io/details#slide-085" title="Link to this slide.">link here</a>
+            <a class="slide-link" href="https://dlvu.github.io/cnns#slide-085" title="Link to this slide.">link here</a>
             <img src="lecture03.convolutions.key-stage-0090.svg" class="slide-image" />
 
             <figcaption>
