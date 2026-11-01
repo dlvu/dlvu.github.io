@@ -7,8 +7,8 @@ slides: true
         <li class="home"><a href="/">Home</a></li>
         <li class="name">Convolutions</li>
                 <li><a href="#video-000">Why convolutions?</a></li>
-                <li><a href="#video-021">Learning convolutions</a></li>
-                <li><a href="#video-062">Convolutional architectures</a></li>
+                <li><a href="#slide-022">Learning convolutions</a></li>
+                <li><a href="#slide-063">Convolutional architectures</a></li>
         <li class="pdf"><a href="https://dlvu.github.io/pdfs/lecture03.convolutions.pdf">PDF</a></li>
     </ul>
 </nav>
