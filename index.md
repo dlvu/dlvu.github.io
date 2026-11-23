@@ -200,11 +200,11 @@ title: Deep Learning @ VU
     <td>
       <h3>8. Learning with graphs </h3>
       <ul class="videos">
-      <li><a href="./graphs/#video-002">8.1 Introduction - Graphs (1A)</a></li>
-      <li><a href="./graphs/#video-017">8.2 Introduction - Embeddings (1B)</a></li>
-      <li><a href="./graphs/#video-025">8.3 Graph Embedding Techniques</a></li>
-      <li><a href="./graphs/#video-048">8.4 Graph Neural Networks</a></li>
-      <li><a href="./graphs/#video-064">8.5 Query embedding</a></li>
+      <li><a href="graphs-old/#video-002">8.1 Introduction - Graphs (1A)</a></li>
+      <li><a href="graphs-old/#video-017">8.2 Introduction - Embeddings (1B)</a></li>
+      <li><a href="graphs-old/#video-025">8.3 Graph Embedding Techniques</a></li>
+      <li><a href="graphs-old/#video-048">8.4 Graph Neural Networks</a></li>
+      <li><a href="graphs-old/#video-064">8.5 Query embedding</a></li>
       </ul>
     </td>
     <td>Michael Cochez</td>

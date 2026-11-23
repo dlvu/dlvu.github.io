@@ -14,16 +14,23 @@
 #    --source /Users/peter/Nextcloud/onderwijs/Deep\ Learning/cNNs/lecture03.convolutions.key \
 #    --base-url "https://dlvu.github.io/cnns" \
 #    --pdf-link "https://dlvu.github.io/pdfs/lecture03.convolutions.pdf" \
+#
+#python generate.py \
+#    --title "Tools of the Trade" \
+#    --dst ../tools \
+#    --source '/Users/peter/Nextcloud/onderwijs/Deep Learning/Tools/lecture04.tools.key' \
+#    --base-url "https://dlvu.github.io/tools" \
+#    --pdf-link "https://dlvu.github.io/pdfs/lecture04.tools.annotated.pdf" \
 
 python generate.py \
-    --title "Tools of the Trade" \
-    --dst ../tools \
-    --source '/Users/peter/Nextcloud/onderwijs/Deep Learning/Tools/lecture04.tools.key' \
-    --base-url "https://dlvu.github.io/tools" \
-    --pdf-link "https://dlvu.github.io/pdfs/lecture04.tools.annotated.pdf" \
+    --title "Graphs" \
+    --dst ../graphs \
+    --source '/Users/peter/Nextcloud/onderwijs/Deep Learning/Graphs/lecture07.graphs.keynote.key' \
+    --base-url "https://dlvu.github.io/graphs" \
+    --pdf-link "https://dlvu.github.io/pdfs/lecture08.graphs.annotated.pdf" \
 
 cd ..
-git add style.css index.md script/ mlvu.script.js course-details cnns cnns-old pdfs tools
+git add style.css index.md script/ mlvu.script.js course-details cnns cnns-old pdfs tools graphs graphs-old
 git commit -m "Auto-update."
 git push
 
