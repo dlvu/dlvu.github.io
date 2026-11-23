@@ -25,7 +25,7 @@
 python generate.py \
     --title "Graphs" \
     --dst ../graphs \
-    --source '/Users/peter/Nextcloud/onderwijs/Deep Learning/Graphs/lecture07.graphs.keynote.key' \
+    --source '/Users/peter/Nextcloud/onderwijs/Deep Learning/Graphs/lecture07.graphs.key' \
     --base-url "https://dlvu.github.io/graphs" \
     --pdf-link "https://dlvu.github.io/pdfs/lecture08.graphs.annotated.pdf" \
 
